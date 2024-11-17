@@ -1,3 +1,7 @@
 <resources>
+<<<<<<< HEAD
     <string name="app_name">cosPick</string>
+=======
+    <string name="app_name">wayToGo</string>
+>>>>>>> 2716e0e (작업 내용 설명)
 </resources>

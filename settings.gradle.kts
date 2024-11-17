@@ -20,6 +20,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "cosPick"
+rootProject.name = "wayToGo"
 include(":app")
- 
