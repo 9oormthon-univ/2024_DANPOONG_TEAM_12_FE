@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".onBoarding.OnBoardingActivity">
+    tools:context="com.example.waytogo.onBoarding.OnBoardingActivity">
 
     <TextView
         android:layout_width="match_parent"

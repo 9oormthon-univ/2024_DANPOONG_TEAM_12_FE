@@ -1,24 +1,20 @@
 import java.util.Properties
 
-
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
 }
 
-    //	Proerties 표준함수명이 Java > kotlin 으로 넘어오면서 변함.
-    //.inputStream() 부분도 표준 함수명이 변해 kotlin 환경에서 사용하시는분들은 이렇게 참고해서 사용하시면 됩니다.
-    val properties = Properties()
-    properties.load(project.rootProject.file("local.properties").inputStream())
+//	Proerties 표준함수명이 Java > kotlin 으로 넘어오면서 변함.
+//.inputStream() 부분도 표준 함수명이 변해 kotlin 환경에서 사용하시는분들은 이렇게 참고해서 사용하시면 됩니다.
+val properties = Properties()
+properties.load(project.rootProject.file("local.properties").inputStream())
+
 
 android {
-    namespace = "com.example.cospick"
-    compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.example.cospick"
         minSdk = 24
-        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 

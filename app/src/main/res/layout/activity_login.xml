@@ -5,10 +5,10 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/main_color"
+    android:background="@color/blue"
     android:orientation="vertical"
     android:gravity="center_horizontal"
-    tools:context=".onBoarding.LoginActivity">
+    tools:context="com.example.waytogo.onBoarding.LoginActivity">
 
     <ImageView
         android:id="@+id/background_iv"
@@ -50,8 +50,8 @@
             android:layout_height="wrap_content"
             android:backgroundTint="#FFD363"
             android:text="카카오톡 로그인"
+            android:fontFamily="@font/applesdgothicneo_regular"
             android:textColor="@color/black"
-            android:fontFamily="@font/applesgdgothicneo"
             android:layout_margin="30dp"/>
 
     </LinearLayout>

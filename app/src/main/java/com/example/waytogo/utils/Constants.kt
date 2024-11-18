@@ -1,4 +1,4 @@
-package com.example.cospick.utils
+package com.example.waytogo.utils
 
 import com.example.cospick.BuildConfig
 

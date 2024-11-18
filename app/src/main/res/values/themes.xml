@@ -1,9 +1,17 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
+<<<<<<< HEAD
     <style name="Base.Theme.CosPick" parent="Theme.Material3.DayNight.NoActionBar">
+=======
+    <style name="Base.Theme.WayToGo" parent="Theme.Material3.DayNight.NoActionBar">
+>>>>>>> e791fbb91175bcf7765690c8c4fb466924c78e27
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 
+<<<<<<< HEAD
     <style name="Theme.CosPick" parent="Base.Theme.CosPick" />
+=======
+    <style name="Theme.WayToGo" parent="Base.Theme.WayToGo" />
+>>>>>>> e791fbb91175bcf7765690c8c4fb466924c78e27
 </resources>
