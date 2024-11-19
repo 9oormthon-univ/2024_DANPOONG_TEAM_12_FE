@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".onBoarding.InterestedFragment">
+
+    <ImageButton
+        android:id="@+id/navigation_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/navigation_btn"
+        android:layout_margin="23dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@android:color/transparent"/>
+
+    <TextView
+        android:id="@+id/trip_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="주로 어떤 여행을 즐기시나요?"
+        android:textSize="20sp"
+        android:fontFamily="@font/applesdgothicneo_m"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="105dp"
+        app:layout_constraintTop_toBottomOf="@id/navigation_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+    <TextView
+        android:id="@+id/select_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="당신의 여행 취향을 선택해주세요"
+        android:textSize="14sp"
+        android:textColor="@color/gray300"
+        android:fontFamily="@font/applesdgothicneo_l"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/trip_tv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/interest_rv"
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:layout_marginHorizontal="42dp"
+        app:layout_constraintBottom_toTopOf="@id/next_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/select_tv" />
+<!--            <LinearLayout-->
+<!--                android:layout_width="104dp"-->
+<!--                android:layout_height="104dp"-->
+<!--                android:layout_columnWeight="1"-->
+<!--                android:gravity="center"-->
+<!--                android:orientation="vertical"-->
+<!--                android:layout_margin="4dp"-->
+<!--                android:clickable="true">-->
+
+<!--                <ImageView-->
+<!--                    android:layout_width="40dp"-->
+<!--                    android:layout_height="40dp"-->
+<!--                    android:layout_marginHorizontal="32dp"-->
+<!--                    android:src="@drawable/ic_launcher_foreground"-->
+<!--                    android:background="@drawable/ic_launcher_background"/>-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="혼자서"-->
+<!--                    android:textSize="14sp"-->
+<!--                    android:textColor="@color/gray200"-->
+<!--                    android:fontFamily="@font/applesdgothicneo_b"-->
+<!--                    android:layout_marginTop="17dp"/>-->
+<!--            </LinearLayout>-->
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/next_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/next_button"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginBottom="80dp"
+        android:text="계속하기"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:fontFamily="@font/applesdgothicneo_b"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
