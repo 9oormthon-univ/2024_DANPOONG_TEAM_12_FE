@@ -4,10 +4,15 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.view.WindowInsets
+import android.widget.FrameLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.fragment.app.Fragment
+import androidx.navigation.findNavController
+import androidx.navigation.ui.setupWithNavController
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class HomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,5 +36,10 @@ class HomeActivity : AppCompatActivity() {
 
         // 상태바 색상 설정
         window.statusBarColor = resources.getColor(R.color.blue, theme)
+
+        val navController = findNavController(R.id.fragmentcontainer_fl)
+        val bottomNavigationView = findViewById<BottomNavigationView>(R.id.homenavigation_bnv)
+
+        bottomNavigationView.setupWithNavController(navController)
     }
 }
