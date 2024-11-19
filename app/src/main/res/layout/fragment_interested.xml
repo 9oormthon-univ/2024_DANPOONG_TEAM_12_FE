@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".onBoarding.InterestedFragment">
+
+    <ImageButton
+        android:id="@+id/navigation_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/navigation_btn"
+        android:layout_margin="23dp"
+        android:background="@android:color/transparent"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/next_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="400dp"
+        android:background="@drawable/next_button"
+        android:layout_marginHorizontal="32dp"
+        android:text="계속하기"
+        android:textColor="@color/blue"
+        android:textSize="15sp"
+        android:fontFamily="@font/applesdgothicneo_b"/>
+
+</LinearLayout>

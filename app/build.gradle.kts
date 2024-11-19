@@ -12,9 +12,13 @@ properties.load(project.rootProject.file("local.properties").inputStream())
 
 
 android {
+    namespace = "com.example.waytogo"
+    compileSdk = 35
 
     defaultConfig {
+        applicationId = "com.example.waytogo"
         minSdk = 24
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 
@@ -59,6 +63,13 @@ dependencies {
     // Kakao SDK 추가
     implementation("com.kakao.sdk:v2-all:2.20.1")
     implementation("com.kakao.sdk:v2-user:2.20.1")
+
+    // Material Design
+    implementation("com.google.android.material:material:1.9.0")
+
+    // Fragment
+    implementation("androidx.fragment:fragment:1.8.3")
+    implementation("androidx.fragment:fragment-ktx:1.8.3")
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)

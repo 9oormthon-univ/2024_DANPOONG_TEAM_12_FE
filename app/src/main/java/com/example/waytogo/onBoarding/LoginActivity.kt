@@ -5,13 +5,13 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
+import com.example.waytogo.databinding.ActivityLoginBinding
 import com.example.waytogo.utils.Constants.TAG
 import com.kakao.sdk.auth.model.OAuthToken
 import com.kakao.sdk.common.model.ClientError
 import com.kakao.sdk.common.model.ClientErrorCause
 import com.kakao.sdk.common.util.Utility
 import com.kakao.sdk.user.UserApiClient
-import missing.namespace.databinding.ActivityLoginBinding
 
 class LoginActivity : AppCompatActivity() {
 

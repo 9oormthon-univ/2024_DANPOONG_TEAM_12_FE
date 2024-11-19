@@ -50,7 +50,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="#FFD363"
             android:text="카카오톡 로그인"
-            android:fontFamily="@font/applesdgothicneo_regular"
+            android:fontFamily="@font/applesdgothicneo_r"
             android:textColor="@color/black"
             android:layout_margin="30dp"/>
 

@@ -7,7 +7,6 @@ import androidx.lifecycle.lifecycleScope
 import com.example.waytogo.onBoarding.LoginActivity
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
-import missing.namespace.R
 
 class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

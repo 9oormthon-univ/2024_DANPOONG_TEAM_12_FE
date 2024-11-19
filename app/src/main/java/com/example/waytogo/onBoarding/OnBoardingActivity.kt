@@ -1,21 +1,31 @@
 package com.example.waytogo.onBoarding
 
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import missing.namespace.R
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.add
+import com.example.waytogo.R
+import androidx.fragment.app.commit
 
 class OnBoardingActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContentView(R.layout.activity_on_boarding)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
+
+        // NickName Fragment로 바로 연결
+        if(savedInstanceState == null){
+            supportFragmentManager.commit {
+                setReorderingAllowed(true)
+                add<NickNameFragment>(R.id.onboarding_fragment)
+            }
         }
+    }
+
+    fun changeFragment(fragment : Fragment){
+        supportFragmentManager
+            .beginTransaction()
+            .addToBackStack(null)
+            .replace(R.id.onboarding_fragment, fragment)
+            .commit()
     }
 }

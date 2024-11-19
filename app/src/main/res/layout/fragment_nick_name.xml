@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageButton
+        android:id="@+id/navigation_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/navigation_btn"
+        android:layout_margin="23dp"
+        android:background="@android:color/transparent"/>
+
+    <TextView
+        android:id="@+id/put_name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="닉네임을 입력해주세요"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/applesdgothicneo_m"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="105dp"/>
+
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="77dp">
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/nickname_el"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="닉네임을 입력해주세요(1~10글자)"
+            style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox"
+            app:shapeAppearance="@style/ShapeAppearance.MaterialComponents.MediumComponent"
+            app:errorTextColor="@color/gray300"
+            app:errorIconDrawable="@null"
+            app:boxStrokeErrorColor="@color/gray200"
+            app:counterEnabled="true"
+            app:counterMaxLength="10">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/nickname_et"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/applesdgothicneo_r"
+                android:textSize="15sp"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/check_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_gravity="end|center_horizontal"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/check_button"
+            android:text="확인"
+            android:textColor="@color/white"
+            android:enabled="false"/>
+
+    </FrameLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/next_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="400dp"
+        android:background="@drawable/next_button"
+        android:layout_marginHorizontal="32dp"
+        android:text="계속하기"
+        android:textColor="@color/blue"
+        android:textSize="15sp"
+        android:fontFamily="@font/applesdgothicneo_b"
+        android:enabled="false"/>
+
+</LinearLayout>
