@@ -5,7 +5,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:name="com.example.waytogo.GlobalAppication"
+        android:name=".GlobalAppication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -15,20 +15,25 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WayToGo"
         tools:targetApi="31">
+        <activity
+            android:name=".CarPool.CarPoolActivity"
+            android:exported="false" />
+
         <meta-data
             android:name="com.kakao.sdk.AppKey"
             android:value="${NATIVE_KEY}" />
 
         <activity
-            android:name="com.example.waytogo.onBoarding.OnBoardingActivity"
-            android:exported="false" />
-        <activity android:name="com.example.waytogo.HomeActivity"
-            android:exported="false"/>
-        <activity
-            android:name="com.example.waytogo.onBoarding.LoginActivity"
+            android:name=".onBoarding.OnBoardingActivity"
             android:exported="false" />
         <activity
-            android:name="com.example.waytogo.SplashActivity"
+            android:name=".HomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".onBoarding.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -37,7 +42,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.waytogo.MainActivity"
+            android:name=".MainActivity"
             android:exported="false" /> <!-- 카카오 로그인, 인가코드를 받기 위한 액티비티 -->
         <activity
             android:name="com.kakao.sdk.auth.AuthCodeHandlerActivity"
