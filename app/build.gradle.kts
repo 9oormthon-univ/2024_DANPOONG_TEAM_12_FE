@@ -24,6 +24,7 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+    }
 
         buildConfigField(
             "String",
@@ -31,6 +32,8 @@ android {
             properties.getProperty("native_key")
         )
         manifestPlaceholders["NATIVE_KEY"] = properties.getProperty("manifest_native_key")
+    buildFeatures {
+        viewBinding = true
     }
 
     buildTypes {
@@ -84,4 +87,8 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    implementation("androidx.navigation:navigation-fragment-ktx:2.8.4")
+    implementation("androidx.navigation:navigation-ui-ktx:2.8.4")
+
 }
