@@ -24,16 +24,21 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-    }
 
         buildConfigField(
             "String",
             "NATIVE_KEY",
             properties.getProperty("native_key")
         )
+
         manifestPlaceholders["NATIVE_KEY"] = properties.getProperty("manifest_native_key")
+    }
+
+
+
     buildFeatures {
         viewBinding = true
+        buildConfig = true
     }
 
     buildTypes {
