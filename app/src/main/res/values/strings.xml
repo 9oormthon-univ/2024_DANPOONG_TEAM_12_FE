@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">wayToGo</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="introduce_ment">인삿말, 사는 곳, 여행 성향, 성격, 취미, MBTI,\n성별 등등 자유롭게 자신을 소개해주세요!</string>
+
+</resources>

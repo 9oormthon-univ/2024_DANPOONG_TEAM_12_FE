@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/bottomhomebf_btn"
+        android:title="홈" />
+    <item
+        android:id="@+id/nav_info"
+        android:icon="@drawable/bottominfobbe_btn"
+        android:title="정보" />
+    <item
+        android:id="@+id/nav_course"
+        android:icon="@drawable/bottomcoursebe_btn"
+        android:title="코스" />
+    <item
+        android:id="@+id/nav_mypage"
+        android:icon="@drawable/bottommypagebe_btn"
+        android:title="MY" />
+
+</menu>
