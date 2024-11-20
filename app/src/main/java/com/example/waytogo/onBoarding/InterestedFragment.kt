@@ -46,21 +46,21 @@ class InterestedFragment : BaseFragment<FragmentInterestedBinding>(FragmentInter
 
     private fun initRecycler(){
         val itemList = mutableListOf<InterestData>(
-            InterestData(R.drawable.course_pick_logo, "혼자서", false),
-            InterestData(R.drawable.course_pick_logo, "친구와 함께", false),
-            InterestData(R.drawable.course_pick_logo, "맛집 투어", false),
-            InterestData(R.drawable.course_pick_logo, "J 여행", false),
-            InterestData(R.drawable.course_pick_logo, "P 여행", false),
-            InterestData(R.drawable.course_pick_logo, "애견 동반", false),
-            InterestData(R.drawable.course_pick_logo, "힐링", false),
-            InterestData(R.drawable.course_pick_logo, "체험", false),
-            InterestData(R.drawable.course_pick_logo, "관광", false),
-            InterestData(R.drawable.course_pick_logo, "액티비티", false),
-            InterestData(R.drawable.course_pick_logo, "포토명소", false),
-            InterestData(R.drawable.course_pick_logo, "뚜벅이", false),
-            InterestData(R.drawable.course_pick_logo, "대중교통", false),
-            InterestData(R.drawable.course_pick_logo, "택시", false),
-            InterestData(R.drawable.course_pick_logo, "직접 운전", false),
+            InterestData(R.drawable.alone_icon, "혼자서", false),
+            InterestData(R.drawable.with_friends_logo, "친구와 함께", false),
+            InterestData(R.drawable.food_logo, "맛집 투어", false),
+            InterestData(R.drawable.memo_logo, "J 여행", false),
+            InterestData(R.drawable.spontaneous_logo, "P 여행", false),
+            InterestData(R.drawable.dog_logo, "애견 동반", false),
+            InterestData(R.drawable.healing_logo, "힐링", false),
+            InterestData(R.drawable.experiment_logo, "체험", false),
+            InterestData(R.drawable.tour_loog, "관광", false),
+            InterestData(R.drawable.activity_logo, "액티비티", false),
+            InterestData(R.drawable.photo_logo, "포토명소", false),
+            InterestData(R.drawable.walk_logo, "뚜벅이", false),
+            InterestData(R.drawable.public_transportation_logo, "대중교통", false),
+            InterestData(R.drawable.taxi_logo, "택시", false),
+            InterestData(R.drawable.drive_logo, "직접 운전", false),
 
         )
 

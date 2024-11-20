@@ -22,7 +22,16 @@
         <meta-data
             android:name="com.kakao.sdk.AppKey"
             android:value="${NATIVE_KEY}" />
+        <meta-data
+            android:name="com.kakao.vectormap.KAKAO_MAP_API"
+            android:value="${NATIVE_KEY}" />
 
+        <activity
+            android:name="com.example.cospick.onBoarding.OnBoardingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HomeActivity"
+            android:exported="false" />
         <activity
             android:name="com.example.cospick.onBoarding.LoginActivity"
             android:exported="false" />

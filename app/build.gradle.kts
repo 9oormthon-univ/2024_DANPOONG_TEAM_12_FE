@@ -6,10 +6,11 @@ plugins {
     alias(libs.plugins.jetbrains.kotlin.android)
 }
 
-    //	Proerties 표준함수명이 Java > kotlin 으로 넘어오면서 변함.
-    //.inputStream() 부분도 표준 함수명이 변해 kotlin 환경에서 사용하시는분들은 이렇게 참고해서 사용하시면 됩니다.
-    val properties = Properties()
-    properties.load(project.rootProject.file("local.properties").inputStream())
+//	Proerties 표준함수명이 Java > kotlin 으로 넘어오면서 변함.
+//.inputStream() 부분도 표준 함수명이 변해 kotlin 환경에서 사용하시는분들은 이렇게 참고해서 사용하시면 됩니다.
+val properties = Properties()
+properties.load(project.rootProject.file("local.properties").inputStream())
+
 
 android {
     namespace = "com.example.waytogo"
@@ -63,6 +64,16 @@ dependencies {
     // Kakao SDK 추가
     implementation("com.kakao.sdk:v2-all:2.20.1")
     implementation("com.kakao.sdk:v2-user:2.20.1")
+
+    // Material Design
+    implementation("com.google.android.material:material:1.9.0")
+
+    // viewPager2
+    implementation("androidx.viewpager2:viewpager2:1.0.0")
+
+    // Fragment
+    implementation("androidx.fragment:fragment:1.8.3")
+    implementation("androidx.fragment:fragment-ktx:1.8.3")
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
