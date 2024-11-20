@@ -19,7 +19,6 @@ import com.example.waytogo.databinding.FragmentNickNameBinding
 import com.example.waytogo.utils.Constants.TAG
 import com.example.waytogo.utils.onMyTextChanged
 
-// Fragment Index 0
 class NickNameFragment : BaseFragment<FragmentNickNameBinding>(FragmentNickNameBinding::inflate) {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -76,19 +75,9 @@ class NickNameFragment : BaseFragment<FragmentNickNameBinding>(FragmentNickNameB
 
         }
 
-//        // 다음 버튼
-//        nextButton.setOnClickListener{
-//            (activity as OnBoardingActivity).changeFragment(1)
-//        }
-
         binding.nextBtn.setOnClickListener {
             (activity as OnBoardingActivity).changeFragment(InterestedFragment())
         }
 
-        // 뒤로가기 버튼
-        val navigationBtn : ImageButton = binding.navigationBtn
-        navigationBtn.setOnClickListener{
-            requireActivity().supportFragmentManager.popBackStack()
-        }
     }
 }

@@ -67,8 +67,8 @@
     </com.google.android.material.tabs.TabLayout>
 
 
-    <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/carpool_vp"
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/carpool_fv"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:paddingHorizontal="24dp"
@@ -78,18 +78,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/carpool_tablayout">
 
-    </androidx.viewpager2.widget.ViewPager2>
+    </androidx.fragment.app.FragmentContainerView>
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/carpool_fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="33dp"
-        android:layout_marginBottom="20dp"
-        android:src="@drawable/custom_fab"
-        android:background="@android:color/transparent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/bottom_navigation"/>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
