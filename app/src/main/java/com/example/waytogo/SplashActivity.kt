@@ -1,10 +1,10 @@
-package com.example.cospick
+package com.example.waytogo
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
-import com.example.cospick.onBoarding.LoginActivity
+import com.example.waytogo.onBoarding.LoginActivity
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 

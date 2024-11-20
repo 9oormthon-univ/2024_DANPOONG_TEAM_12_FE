@@ -1,10 +1,7 @@
 package com.example.waytogo.onBoarding.Interest
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.example.waytogo.R
@@ -26,12 +23,12 @@ class InterestAdapter(val items: MutableList<InterestData>) :
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): InterestAdapter.ViewHolder {
+    ): ViewHolder {
         val view = ViewHolder(InterestItemBinding.inflate(LayoutInflater.from(parent.context), parent, false))
         return view
     }
 
-    override fun onBindViewHolder(holder: InterestAdapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.itemView.setOnClickListener {
             itemClickListener.onItemClick(position)
             if (items[position].isSelected){

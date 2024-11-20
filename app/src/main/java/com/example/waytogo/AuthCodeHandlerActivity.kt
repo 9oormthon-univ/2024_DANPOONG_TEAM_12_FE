@@ -1,9 +1,9 @@
-package com.example.cospick
+package com.example.waytogo
 
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
-import com.example.cospick.utils.Constants.TAG
+import com.example.waytogo.utils.Constants.TAG
 import com.kakao.sdk.auth.model.OAuthToken
 import com.kakao.sdk.common.model.ClientError
 import com.kakao.sdk.common.model.ClientErrorCause

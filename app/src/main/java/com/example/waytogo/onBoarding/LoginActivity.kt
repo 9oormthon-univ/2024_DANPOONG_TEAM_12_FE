@@ -1,17 +1,12 @@
-package com.example.cospick.onBoarding
+package com.example.waytogo.onBoarding
 
-import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.example.cospick.R
-import com.example.cospick.databinding.ActivityLoginBinding
-import com.example.cospick.utils.Constants.TAG
+import com.example.waytogo.databinding.ActivityLoginBinding
+import com.example.waytogo.utils.Constants.TAG
 import com.kakao.sdk.auth.model.OAuthToken
 import com.kakao.sdk.common.model.ClientError
 import com.kakao.sdk.common.model.ClientErrorCause

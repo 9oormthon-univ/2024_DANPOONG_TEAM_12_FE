@@ -64,6 +64,7 @@ dependencies {
     // Kakao SDK 추가
     implementation("com.kakao.sdk:v2-all:2.20.1")
     implementation("com.kakao.sdk:v2-user:2.20.1")
+    implementation("com.kakao.maps.open:android:2.9.5")
 
     // Material Design
     implementation("com.google.android.material:material:1.9.0")
