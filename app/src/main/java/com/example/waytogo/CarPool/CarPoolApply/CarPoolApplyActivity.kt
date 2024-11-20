@@ -25,7 +25,7 @@ class CarPoolApplyActivity : AppCompatActivity() {
         if(savedInstanceState == null){
             supportFragmentManager.commit {
                 setReorderingAllowed(true)
-                add<FindListFragment>(R.id.carpool_fv)
+                replace(R.id.carpool_fv, passingLocation(FindListFragment()))
             }
         }
     }
@@ -39,14 +39,18 @@ class CarPoolApplyActivity : AppCompatActivity() {
             .commitAllowingStateLoss()
     }
 
-    private fun setInit() {
+    // 검색한 위치 정보 넘겨주기
+    private fun passingLocation(fragment: Fragment): Fragment {
         // MyNoticeFragment에서 넘어온 데이터
         val department = intent.getStringExtra("department")
         val destination = intent.getStringExtra("destination")
 
-        // 값 넣어주기
-        with(binding) {
+        // ProfileFragment에 다시 데이터 전달
+        val bundle = Bundle()
+        bundle.putString("department", department)
+        bundle.putString("destination", destination)
+        fragment.arguments = bundle
 
-        }
+        return fragment
     }
 }
