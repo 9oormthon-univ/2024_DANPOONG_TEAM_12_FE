@@ -1,0 +1,11 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+<<<<<<< HEAD
+    <style name="Base.Theme.CosPick" parent="Theme.Material3.DayNight.NoActionBar">
+=======
+    <style name="Base.Theme.WayToGo" parent="Theme.Material3.DayNight.NoActionBar">
+>>>>>>> 2716e0e (작업 내용 설명)
+        <!-- Customize your dark theme here. -->
+        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+    </style>
+</resources>
