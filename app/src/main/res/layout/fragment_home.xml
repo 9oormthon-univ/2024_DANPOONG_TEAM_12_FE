@@ -26,4 +26,74 @@
         app:layout_constraintStart_toEndOf="@id/homematching_btn"
         android:layout_marginLeft="8dp" />
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/homematching_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="40dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/homecurved_background">
+
+            <TextView
+                android:id="@+id/hometitle_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="맞춤 추천 여행지 TOP3"
+                android:fontFamily="@font/applesdgothicneo_eb"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="32dp"
+                android:layout_marginLeft="25dp" />
+
+            <ImageView
+                android:id="@+id/homedoover_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/homedoover_btn"
+                app:layout_constraintTop_toTopOf="@id/hometitle_tv"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginRight="102dp"/>
+
+            <TextView
+                android:id="@+id/homedoover_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="다시 추천 받기"
+                android:textSize="12sp"
+                android:fontFamily="@font/applesdgothicneo_l"
+                android:textColor="@color/gray300"
+                app:layout_constraintTop_toTopOf="@id/homedoover_btn"
+                app:layout_constraintBottom_toBottomOf="@id/homedoover_btn"
+                app:layout_constraintStart_toEndOf="@id/homedoover_btn"
+                android:layout_marginLeft="9dp" />
+            
+            <View
+                android:layout_width="364dp"
+                android:layout_height="1dp"
+                android:background="@color/gray200"
+                app:layout_constraintTop_toBottomOf="@id/hometitle_tv"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="16dp"/>
+
+
+
+
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
