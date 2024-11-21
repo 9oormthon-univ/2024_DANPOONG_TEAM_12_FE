@@ -5,6 +5,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.EditText
 import com.example.waytogo.databinding.CarpoolModalLayoutBinding
 import com.example.waytogo.utils.API.NATIVE_KEY
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
@@ -14,7 +15,7 @@ import com.kakao.vectormap.KakaoMapSdk
 import com.kakao.vectormap.MapLifeCycleCallback
 import java.lang.Exception
 
-class CarpoolModalFragment : BottomSheetDialogFragment() {
+class CarpoolModalFragment() : BottomSheetDialogFragment() {
     private lateinit var binding : CarpoolModalLayoutBinding
     private var kakaoMap : KakaoMap? = null
 

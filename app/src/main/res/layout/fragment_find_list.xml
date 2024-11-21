@@ -15,11 +15,15 @@
 
         <TextView
             android:id="@+id/start_location_tv"
-            android:layout_width="wrap_content"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:text="서울 XX구"
             android:textSize="20sp"
-            android:fontFamily="@font/applesdgothicneo_eb"/>
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:fontFamily="@font/applesdgothicneo_eb"
+            android:layout_weight="1"
+            android:gravity="center"/>
 
         <ImageView
             android:layout_width="wrap_content"
@@ -30,11 +34,15 @@
 
         <TextView
             android:id="@+id/end_location_tv"
-            android:layout_width="wrap_content"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:text="서울 XX구"
             android:textSize="20sp"
-            android:fontFamily="@font/applesdgothicneo_eb"/>
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:fontFamily="@font/applesdgothicneo_eb"
+            android:layout_weight="1"
+            android:gravity="center"/>
 
     </LinearLayout>
 

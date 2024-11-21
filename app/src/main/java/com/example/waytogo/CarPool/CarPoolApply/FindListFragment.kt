@@ -19,9 +19,9 @@ import com.google.gson.Gson
 class FindListFragment : BaseFragment<FragmentFindListBinding>(FragmentFindListBinding::inflate) {
 
     val itemList = mutableListOf<ListData>(
-        ListData(R.drawable.dummy_image_1, "배봉까지 같이 가요!", "출발지: 대한민국 역사 박물관", "도착지: 서울 동대문구 휘경2동", "날짜: 2024. 11. 23", "시간: 오전 9시"),
-        ListData(R.drawable.dummy_image_2, "바다보러 해운대 갑시다!", "출발지: 대한민국 역사 박물관", "도착지: 서울 동대문구 휘경2동", "날짜: 2024. 11. 23", "시간: 오전 9시"),
-        ListData(R.drawable.dummy_image_3, "춘천 같이 가실 분", "출발지: 대한민국 역사 박물관", "도착지: 서울 동대문구 휘경2동", "날짜: 2024. 11. 23", "시간: 오전 9시"),
+        ListData(R.drawable.dummy_image_1, "배봉까지 같이 가요!", "출발지: 대한민국 역사 박물관", "목적지: 서울 동대문구 휘경2동", "날짜: 2024. 11. 23", "시간: 오전 9시"),
+        ListData(R.drawable.dummy_image_2, "바다보러 해운대 갑시다!", "출발지: 서울 종로구", "목적지: 해운대역", "날짜: 2024. 11. 22", "시간: 오전 7시"),
+        ListData(R.drawable.dummy_image_3, "춘천 같이 가실 분", "출발지: 서울 종로구", "목적지: 춘천", "날짜: 2024. 11. 24", "시간: 오후 3시"),
         ListData(R.drawable.ic_launcher_foreground, "배봉까지 같이 가요!", "출발지: 대한민국 역사 박물관", "도착지: 서울 동대문구 휘경2동", "날짜: 2024. 11. 23", "시간: 오전 9시"),
         ListData(R.drawable.ic_launcher_foreground, "배봉까지 같이 가요!", "출발지: 대한민국 역사 박물관", "도착지: 서울 동대문구 휘경2동", "날짜: 2024. 11. 23", "시간: 오전 9시"),
         ListData(R.drawable.ic_launcher_foreground, "배봉까지 같이 가요!", "출발지: 대한민국 역사 박물관", "도착지: 서울 동대문구 휘경2동", "날짜: 2024. 11. 23", "시간: 오전 9시"),
@@ -73,7 +73,7 @@ class FindListFragment : BaseFragment<FragmentFindListBinding>(FragmentFindListB
     private fun moveToPostFragment(itemList: ListData) {
         Log.d("HomeFragment", "ListData: $itemList")
         (context as CarPoolApplyActivity).supportFragmentManager.beginTransaction()
-            .add(R.id.carpool_fl, CarPoolPostFragment().apply {
+            .replace(R.id.carpool_fv, CarPoolPostFragment().apply {
                 arguments = Bundle().apply {
                     val gson = Gson()
                     val CarpoolInformJson = gson.toJson(itemList)

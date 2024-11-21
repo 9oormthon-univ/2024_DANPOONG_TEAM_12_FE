@@ -2,7 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/carpool_fl"
+    android:id="@+id/carpool_apply_fl"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".CarPool.CarPoolActivity">
@@ -48,8 +48,7 @@
         android:id="@+id/carpool_fv"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:paddingHorizontal="24dp"
-        android:paddingVertical="16dp"
+        android:padding="16dp"
         app:layout_constraintBottom_toTopOf="@id/bottom_navigation"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
