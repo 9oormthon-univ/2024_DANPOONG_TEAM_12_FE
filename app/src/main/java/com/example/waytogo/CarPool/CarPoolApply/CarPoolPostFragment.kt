@@ -1,4 +1,4 @@
-package com.example.waytogo.CarPool
+package com.example.waytogo.CarPool.CarPoolApply
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,11 +7,13 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.waytogo.BaseFragment
 import com.example.waytogo.R
-import com.example.waytogo.databinding.FragmentCarPoolApplicationBinding
+import com.example.waytogo.databinding.FragmentCarPoolPostBinding
 
-class CarPoolApplicationFragment : BaseFragment<FragmentCarPoolApplicationBinding>(FragmentCarPoolApplicationBinding::inflate) {
+class CarPoolPostFragment : BaseFragment<FragmentCarPoolPostBinding>(FragmentCarPoolPostBinding::inflate) {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
+
 
 }

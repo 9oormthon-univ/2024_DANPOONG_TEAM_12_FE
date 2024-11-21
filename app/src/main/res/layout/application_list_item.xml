@@ -19,6 +19,7 @@
         app:layout_constraintBottom_toBottomOf="parent">
 
         <TextView
+            android:id="@+id/title_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="배봉산까지 같이 가요!"
@@ -66,8 +67,8 @@
 
     <ImageView
         android:id="@+id/list_image_iv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="108dp"
+        android:layout_height="108dp"
         android:src="@drawable/ic_launcher_foreground"
         android:background="@drawable/ic_launcher_background"
         android:layout_marginEnd="30dp"

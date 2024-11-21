@@ -46,8 +46,8 @@ class FindCarPoolFragment : BaseFragment<FragmentFindCarPoolBinding>(FragmentFin
 
     // 입력된 위치 데이터 넘겨주면서 프래그먼트 이동
     private fun moveToApplyActivity(){
-        val department = binding.departmentEt.text.toString()
-        val destination = binding.destinationEt.text.toString()
+        val startLocation = binding.departmentEt.text.toString()
+        val endLocation = binding.destinationEt.text.toString()
 
 //        (activity as CarPoolActivity).changeFragment(CarPoolListFragment().apply {
 //            arguments = Bundle().apply {
@@ -59,8 +59,8 @@ class FindCarPoolFragment : BaseFragment<FragmentFindCarPoolBinding>(FragmentFin
         val intent = Intent(activity, CarPoolApplyActivity::class.java)
         // 데이터 넣기
         intent.apply {
-            this.putExtra("department", department)
-            this.putExtra("destination", destination)
+            this.putExtra("startLocation", startLocation)
+            this.putExtra("endLocation", endLocation)
         }
         // 화면 이동
         startActivity(intent)

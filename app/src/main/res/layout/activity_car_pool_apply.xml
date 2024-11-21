@@ -44,29 +44,6 @@
 
     </androidx.appcompat.widget.Toolbar>
 
-
-    <com.google.android.material.tabs.TabLayout
-        android:id="@+id/carpool_tablayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/toolbar"
-        app:tabIndicator="@null">
-
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="카풀 찾기" />
-
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="지원 내역" />
-
-    </com.google.android.material.tabs.TabLayout>
-
-
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/carpool_fv"
         android:layout_width="match_parent"
@@ -76,7 +53,7 @@
         app:layout_constraintBottom_toTopOf="@id/bottom_navigation"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/carpool_tablayout">
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
 
     </androidx.fragment.app.FragmentContainerView>
 

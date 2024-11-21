@@ -19,30 +19,30 @@
             android:name=".onBoarding.OnBoardingActivity"
             android:exported="false" />
 
-        <meta-data
-            android:name="com.kakao.sdk.AppKey"
-            android:value="${NATIVE_KEY}" />
-        <meta-data
-            android:name="com.kakao.vectormap.KAKAO_MAP_API"
-            android:value="${NATIVE_KEY}" />
-
-        <activity
-            android:name=".onBoarding.OnBoardingActivity"
-            android:exported="false" />
-        <activity
-            android:name=".HomeActivity"
-            android:exported="false" />
-        <activity
-            android:name=".onBoarding.LoginActivity"
-            android:exported="false" />
-        <activity
-            android:name=".SplashActivity"
+        <activity android:name=".CarPool.CarPoolActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+
+        <activity android:name=".CarPool.CarPoolApply.CarPoolApplyActivity"
+            android:exported="false"/>
+
+        <meta-data
+            android:name="com.kakao.sdk.AppKey"
+            android:value="${NATIVE_KEY}" />
+        <meta-data
+            android:name="com.kakao.vectormap.KAKAO_MAP_API"
+            android:value="${NATIVE_KEY}" />
+        <activity
+            android:name=".onBoarding.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SplashActivity"
+            android:exported="false">
         </activity>
         <activity
             android:name="com.example.waytogo.MainActivity"
