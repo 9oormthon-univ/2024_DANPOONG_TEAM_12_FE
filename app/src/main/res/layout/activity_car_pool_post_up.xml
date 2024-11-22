@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/carpool_apply_fl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CarPool.CarPoolPostUpActivity">
+
+    <!--툴바-->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/blue"
+        android:gravity="center_vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/appbar_logo_icon"
+            android:background="@android:color/transparent"
+            android:layout_marginStart="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CARPOOL"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:fontFamily="@font/applesdgothicneo_h"
+            android:layout_marginStart="10dp"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/notification_icon"
+            android:background="@android:color/transparent"
+            android:layout_gravity="end"
+            android:layout_marginEnd="24dp"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:id="@+id/scrollV"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintBottom_toTopOf="@id/post_up_btn">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="25dp"
+            android:paddingTop="24dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/applesdgothicneo_eb"
+                android:text="글 올리기"
+                android:textSize="20sp" />
+
+            <View
+                android:id="@+id/divider7"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="20dp"
+                android:layout_weight="1"
+                android:background="@color/gray300" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="30dp">
+
+                <ImageButton
+                    android:id="@+id/photo_upload_ib"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/back_button"
+                    android:paddingHorizontal="18dp"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="8dp"
+                    android:src="@drawable/photo_upload_icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="21dp"
+                    android:fontFamily="@font/applesdgothicneo_m"
+                    android:text="제목"
+                    android:textSize="15sp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/title_el"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="12dp"
+                    android:hint="제목을 입력해주세요"
+                    app:boxStrokeErrorColor="@color/gray200"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="15"
+                    app:errorIconDrawable="@null"
+                    app:errorTextColor="@color/gray300"
+                    app:shapeAppearance="@style/ShapeAppearance.MaterialComponents.MediumComponent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/title_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/applesdgothicneo_r"
+                        android:textSize="15sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="21dp"
+                    android:fontFamily="@font/applesdgothicneo_m"
+                    android:text="목적지"
+                    android:textSize="15sp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/destination_in_post_el"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="12dp"
+                    android:hint="목적지를 입력해주세요"
+                    app:boxStrokeErrorColor="@color/gray200"
+                    app:errorIconDrawable="@null"
+                    app:errorTextColor="@color/gray300"
+                    app:shapeAppearance="@style/ShapeAppearance.MaterialComponents.MediumComponent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/destination_in_post_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/applesdgothicneo_r"
+                        android:textSize="15sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="21dp"
+                    android:fontFamily="@font/applesdgothicneo_m"
+                    android:text="날짜"
+                    android:textSize="15sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="12dp">
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/start_date_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="2024년 11월 23일"
+                        android:textColor="@color/gray300"
+                        android:fontFamily="@font/applesdgothicneo_l"
+                        android:textSize="14sp"
+                        android:background="@drawable/back_button"
+                        android:paddingHorizontal="19dp"
+                        android:paddingVertical="19dp"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="9dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="~"
+                        android:textSize="20sp"
+                        android:layout_marginHorizontal="5dp"
+                        android:textColor="@color/gray300"
+                        android:fontFamily="@font/applesdgothicneo_eb"
+                        android:layout_gravity="center_vertical"/>
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/end_date_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="2024년 11월 23일"
+                        android:textColor="@color/gray300"
+                        android:fontFamily="@font/applesdgothicneo_l"
+                        android:textSize="14sp"
+                        android:background="@drawable/back_button"
+                        android:paddingHorizontal="19dp"
+                        android:paddingVertical="19dp"
+                        android:layout_weight="1"
+                        android:layout_marginStart="9dp"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="21dp"
+                    android:fontFamily="@font/applesdgothicneo_m"
+                    android:text="시간"
+                    android:textSize="15sp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="12dp">
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/start_time_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="오전 10:00"
+                        android:textColor="@color/gray300"
+                        android:fontFamily="@font/applesdgothicneo_l"
+                        android:textSize="14sp"
+                        android:background="@drawable/back_button"
+                        android:paddingHorizontal="19dp"
+                        android:paddingVertical="19dp"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="9dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="~"
+                        android:textSize="20sp"
+                        android:layout_marginHorizontal="5dp"
+                        android:textColor="@color/gray300"
+                        android:fontFamily="@font/applesdgothicneo_eb"
+                        android:layout_gravity="center_vertical"/>
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/end_time_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="오후 10:00"
+                        android:textColor="@color/gray300"
+                        android:fontFamily="@font/applesdgothicneo_l"
+                        android:textSize="14sp"
+                        android:background="@drawable/back_button"
+                        android:paddingHorizontal="19dp"
+                        android:paddingVertical="19dp"
+                        android:layout_weight="1"
+                        android:layout_marginStart="9dp"/>
+
+                </LinearLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/post_content_el"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="218dp"
+                    android:layout_marginTop="12dp"
+                    android:hint="내용을 입력해주세요"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="800"
+                    app:boxStrokeErrorColor="@color/gray200"
+                    app:errorIconDrawable="@null"
+                    app:errorTextColor="@color/gray300"
+                    app:shapeAppearance="@style/ShapeAppearance.MaterialComponents.MediumComponent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/post_content_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/applesdgothicneo_r"
+                        android:gravity="top"
+                        android:textSize="15sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/post_up_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="400dp"
+        android:background="@drawable/next_button"
+        android:layout_marginHorizontal="32dp"
+        android:text="계속하기"
+        android:textColor="@color/blue"
+        android:textSize="15sp"
+        android:fontFamily="@font/applesdgothicneo_b"
+        android:enabled="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

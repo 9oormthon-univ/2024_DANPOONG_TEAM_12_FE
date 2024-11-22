@@ -1,10 +1,13 @@
 package com.example.waytogo.CarPool
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.add
 import androidx.fragment.app.commit
+import androidx.recyclerview.widget.RecyclerView
+import androidx.viewpager2.widget.ViewPager2
 import com.example.waytogo.R
 import com.example.waytogo.databinding.ActivityCarPoolBinding
 import com.example.waytogo.onBoarding.NickNameFragment
@@ -21,6 +24,9 @@ class CarPoolActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         initViewPager()
+        binding.carpoolVp.run {
+            isUserInputEnabled = false
+        }
 //
 //        // CarPool Fragment로 바로 연결
 //        if(savedInstanceState == null){
@@ -29,6 +35,11 @@ class CarPoolActivity : AppCompatActivity() {
 //                add<FindCarPoolFragment>(R.id.carpool_fragment)
 //            }
 //        }
+        // FAB 버튼 누르면 글 쓰기 프래그먼트로 이동
+        binding.carpoolIb.setOnClickListener {
+            val intent = Intent(this, CarPoolPostUpActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     // Fragment 변환
@@ -40,7 +51,7 @@ class CarPoolActivity : AppCompatActivity() {
             .commitAllowingStateLoss()
     }
 
-    fun initViewPager(){
+    private fun initViewPager(){
         val viewPager = binding.carpoolVp
         val viewPagerAdapter = CarPoolViewPagerAdapter(this)
         viewPager.adapter = viewPagerAdapter
@@ -50,4 +61,5 @@ class CarPoolActivity : AppCompatActivity() {
             tab.text = tabTextList[position]
         }.attach()
     }
+
 }

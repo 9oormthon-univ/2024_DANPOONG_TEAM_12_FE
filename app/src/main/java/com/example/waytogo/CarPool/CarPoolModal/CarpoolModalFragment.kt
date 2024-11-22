@@ -1,23 +1,45 @@
 package com.example.waytogo.CarPool.CarPoolModal
 
+import android.content.Context
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.inputmethod.EditorInfo
+import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
+import android.widget.Toast
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.lifecycleScope
+import com.example.waytogo.CarPool.FindCarPoolFragment
+import com.example.waytogo.R
+import com.example.waytogo.Retrofit.MapViewModel
+import com.example.waytogo.Retrofit.RetrofitManager
+import com.example.waytogo.Retrofit.SearchDocumentsResponse
 import com.example.waytogo.databinding.CarpoolModalLayoutBinding
+import com.example.waytogo.databinding.FragmentFindCarPoolBinding
 import com.example.waytogo.utils.API.NATIVE_KEY
+import com.example.waytogo.utils.Constants.TAG
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.kakao.vectormap.KakaoMap
 import com.kakao.vectormap.KakaoMapReadyCallback
 import com.kakao.vectormap.KakaoMapSdk
+import com.kakao.vectormap.LatLng
 import com.kakao.vectormap.MapLifeCycleCallback
+import com.kakao.vectormap.camera.CameraAnimation
+import com.kakao.vectormap.camera.CameraUpdateFactory
+import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.launch
 import java.lang.Exception
 
+@AndroidEntryPoint
 class CarpoolModalFragment() : BottomSheetDialogFragment() {
-    private lateinit var binding : CarpoolModalLayoutBinding
+    private lateinit var _binding : CarpoolModalLayoutBinding
+    private lateinit var binding : FragmentFindCarPoolBinding
     private var kakaoMap : KakaoMap? = null
+
+    private val mapViewModel: MapViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -25,46 +47,18 @@ class CarpoolModalFragment() : BottomSheetDialogFragment() {
         savedInstanceState: Bundle?
     ): View? {
         super.onCreateView(inflater, container, savedInstanceState)
-        binding = CarpoolModalLayoutBinding.inflate(inflater, container, false)
+        _binding = CarpoolModalLayoutBinding.inflate(inflater, container, false)
 
-        return binding.root
+        return _binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        showMapView()
     }
 
     companion object{
-        const val TAG = "CarpoolModal"
+        const val TAGG = "CarpoolModal"
     }
 
-    // 카카오맵 켜기
-    private fun showMapView(){
 
-        val mapView = binding.mapView
-
-        // KakaoMap SDK 초기화
-        KakaoMapSdk.init(requireContext(), NATIVE_KEY)
-
-        mapView.start(object : MapLifeCycleCallback() {
-            override fun onMapDestroy() {
-                // 지도 API가 정상적으로 종료될 때 실행
-                Log.d(TAG, "onMapDestroy")
-            }
-
-            override fun onMapError(p0: Exception?) {
-                // 인증 실패 및 지도 사용 중 에러가 발생할 때 호출
-                Log.d(TAG, "onMapError")
-            }
-
-        }, object : KakaoMapReadyCallback() {
-            override fun onMapReady(kakaomap: KakaoMap) {
-                // 정상적으로 인증이 완료되었을 때 호출
-                kakaoMap = kakaomap
-            }
-
-        })
-    }
 }

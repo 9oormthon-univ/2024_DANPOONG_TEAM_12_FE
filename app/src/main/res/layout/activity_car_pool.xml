@@ -80,8 +80,8 @@
 
     </androidx.viewpager2.widget.ViewPager2>
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/carpool_fab"
+    <ImageButton
+        android:id="@+id/carpool_ib"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="33dp"
