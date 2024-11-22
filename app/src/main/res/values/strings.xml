@@ -4,4 +4,9 @@
 
     <string name="introduce_ment">인삿말, 사는 곳, 여행 성향, 성격, 취미, MBTI,\n성별 등등 자유롭게 자신을 소개해주세요!</string>
 
+    <string name="course_setting">각 날짜의 일정 <font color="#5A5A5A">시작시간</font> 과 <font color="#5A5A5A">종료시간</font>을 설정해주세요.
+        \n기본 설정 시간은 <font color="#5A5A5A">오전 10시 - 오후 10시 총 12시간</font> 입니다.</string>
+
+
+
 </resources>

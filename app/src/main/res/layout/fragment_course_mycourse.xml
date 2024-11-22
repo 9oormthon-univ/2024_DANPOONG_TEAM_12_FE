@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Course.CourseMycourseFragment"
+    android:background="@color/white">
+
+    <View
+        android:layout_width="364dp"
+        android:layout_height="1dp"
+        android:background="@color/gray300"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <ImageView
+        android:id="@+id/courseMycourse_blankbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/coursemycourse_blankbox"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="76dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="아직 내 코스가 존재하지 않습니다\n+ 버튼을 통해 여행 코스를 추가해 보세요!"
+        android:gravity="center"
+        android:fontFamily="@font/applesdgothicneo_l"
+        android:textSize="13sp"
+        android:textColor="#ADADAF"
+        app:layout_constraintTop_toBottomOf="@id/courseMycourse_blankbox"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

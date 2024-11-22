@@ -3,17 +3,12 @@ package com.example.waytogo
 import android.os.Bundle
 import android.util.Log
 import android.view.View
-import android.view.WindowInsets
-import android.widget.FrameLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
-import androidx.fragment.app.Fragment
-import androidx.navigation.findNavController
-import androidx.navigation.ui.setupWithNavController
+import com.example.waytogo.Course.CourseFragment
 import com.example.waytogo.databinding.ActivityHomeBinding
-import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class HomeActivity : AppCompatActivity() {
     private val binding : ActivityHomeBinding by lazy {
@@ -60,7 +55,9 @@ class HomeActivity : AppCompatActivity() {
                     true
                 }
                 R.id.nav_course -> {
-                    supportFragmentManager.beginTransaction().replace(R.id.fragmentcontainer_fl,CourseFragment()).commit()
+                    supportFragmentManager.beginTransaction().replace(R.id.fragmentcontainer_fl,
+                        CourseFragment()
+                    ).commit()
                     true
                 }
                 R.id.nav_mypage -> {
