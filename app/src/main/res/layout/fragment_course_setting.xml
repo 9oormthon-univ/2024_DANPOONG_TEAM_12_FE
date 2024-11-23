@@ -127,7 +127,7 @@
         app:layout_constraintEnd_toEndOf="@id/courseSetting_endDate_iv"/>
 
     <ImageView
-        android:id="@+id/courseSetting_startTime_iv"
+        android:id="@+id/courseSetting_firstStartTime_iv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/course_setting_time_box"
@@ -136,40 +136,40 @@
         android:layout_marginLeft="8dp" />
 
     <TextView
-        android:id="@+id/courseSetting_startTime_tv"
+        android:id="@+id/courseSetting_firstStartTime_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="오전 10:00"
         android:textSize="14sp"
         android:fontFamily="@font/applesdgothicneo_l"
-        app:layout_constraintTop_toTopOf="@id/courseSetting_startTime_iv"
-        app:layout_constraintBottom_toBottomOf="@id/courseSetting_startTime_iv"
-        app:layout_constraintStart_toStartOf="@id/courseSetting_startTime_iv"
+        app:layout_constraintTop_toTopOf="@id/courseSetting_firstStartTime_iv"
+        app:layout_constraintBottom_toBottomOf="@id/courseSetting_firstStartTime_iv"
+        app:layout_constraintStart_toStartOf="@id/courseSetting_firstStartTime_iv"
         android:layout_marginLeft="14dp"/>
 
     <ImageView
-        android:id="@+id/courseSetting_startMin_iv"
+        android:id="@+id/courseSetting_firstEndTime_iv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/course_setting_time_box"
-        app:layout_constraintTop_toTopOf="@id/courseSetting_startTime_iv"
-        app:layout_constraintStart_toEndOf="@id/courseSetting_startTime_iv"
+        app:layout_constraintTop_toTopOf="@id/courseSetting_firstStartTime_iv"
+        app:layout_constraintStart_toEndOf="@id/courseSetting_firstStartTime_iv"
         android:layout_marginLeft="8dp"/>
 
     <TextView
-        android:id="@+id/courseSetting_startMin_tv"
+        android:id="@+id/courseSetting_firstEndTime_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="오후 10:00"
         android:textSize="14sp"
         android:fontFamily="@font/applesdgothicneo_l"
-        app:layout_constraintTop_toTopOf="@id/courseSetting_startMin_iv"
-        app:layout_constraintBottom_toBottomOf="@id/courseSetting_startMin_iv"
-        app:layout_constraintStart_toStartOf="@id/courseSetting_startMin_iv"
+        app:layout_constraintTop_toTopOf="@id/courseSetting_firstEndTime_iv"
+        app:layout_constraintBottom_toBottomOf="@id/courseSetting_firstEndTime_iv"
+        app:layout_constraintStart_toStartOf="@id/courseSetting_firstEndTime_iv"
         android:layout_marginLeft="14dp"/>
 
     <ImageView
-        android:id="@+id/courseSetting_endTime_iv"
+        android:id="@+id/courseSetting_secondStartTime_iv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/course_setting_time_box"
@@ -178,36 +178,36 @@
         android:layout_marginLeft="8dp" />
 
     <TextView
-        android:id="@+id/courseSetting_endTime_tv"
+        android:id="@+id/courseSetting_secondStartTime_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="오전 10:00"
         android:textSize="14sp"
         android:fontFamily="@font/applesdgothicneo_l"
-        app:layout_constraintTop_toTopOf="@id/courseSetting_endTime_iv"
-        app:layout_constraintBottom_toBottomOf="@id/courseSetting_endTime_iv"
-        app:layout_constraintStart_toStartOf="@id/courseSetting_endTime_iv"
+        app:layout_constraintTop_toTopOf="@id/courseSetting_secondStartTime_iv"
+        app:layout_constraintBottom_toBottomOf="@id/courseSetting_secondStartTime_iv"
+        app:layout_constraintStart_toStartOf="@id/courseSetting_secondStartTime_iv"
         android:layout_marginLeft="14dp"/>
 
     <ImageView
-        android:id="@+id/courseSetting_endMin_iv"
+        android:id="@+id/courseSetting_secondEndTime_iv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/course_setting_time_box"
-        app:layout_constraintTop_toTopOf="@id/courseSetting_endTime_iv"
-        app:layout_constraintStart_toEndOf="@id/courseSetting_endTime_iv"
+        app:layout_constraintTop_toTopOf="@id/courseSetting_secondStartTime_iv"
+        app:layout_constraintStart_toEndOf="@id/courseSetting_secondStartTime_iv"
         android:layout_marginLeft="8dp"/>
 
     <TextView
-        android:id="@+id/courseSetting_endMin_tv"
+        android:id="@+id/courseSetting_secondEndTime_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="오후 10:00"
         android:textSize="14sp"
         android:fontFamily="@font/applesdgothicneo_l"
-        app:layout_constraintTop_toTopOf="@id/courseSetting_endMin_iv"
-        app:layout_constraintBottom_toBottomOf="@id/courseSetting_endMin_iv"
-        app:layout_constraintStart_toStartOf="@id/courseSetting_endMin_iv"
+        app:layout_constraintTop_toTopOf="@id/courseSetting_secondEndTime_iv"
+        app:layout_constraintBottom_toBottomOf="@id/courseSetting_secondEndTime_iv"
+        app:layout_constraintStart_toStartOf="@id/courseSetting_secondEndTime_iv"
         android:layout_marginLeft="14dp"/>
 
     <ImageView

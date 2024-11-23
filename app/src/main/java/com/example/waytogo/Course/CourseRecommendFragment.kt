@@ -63,18 +63,23 @@ class CourseRecommendFragment : Fragment() {
             binding.coursesublistCl.visibility = View.VISIBLE
         }
         binding.courseLocationBox.setOnClickListener {
+            //gone된 이미지를 보이게 변경
             binding.coursesublistCl.visibility = View.VISIBLE
         }
 
+        //edittext 입력을 계속 주시 (textwatcher)
         binding.courseLocationEt.addTextChangedListener(object :TextWatcher{
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
 
             }
 
+            //텍스트 입력시 변경
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
                 if(s.isNullOrEmpty()){
+                    //edittext내에 값이 없으면 원래 이미지로 변경
                     binding.courseLocationBox.setImageResource(R.drawable.courselocation_box)
                 }else {
+                    //edittext내에 값이 있으면 이미지 변경
                     binding.courseLocationBox.setImageResource(R.drawable.courselocationaf_box)
                 }
             }
@@ -84,13 +89,17 @@ class CourseRecommendFragment : Fragment() {
             }
         })
 
+        //edittext 입력을 계속 주시 (textwatcher)
         binding.courseDateEt.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
 
+            //텍스트 입력시 변경
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
                 if(s.isNullOrEmpty()){
+                    //edittext내에 값이 없으면 원래 이미지로 변경
                     binding.courseDateBox.setImageResource(R.drawable.coursedate_box)
                 }else {
+                    //edittext내에 값이 있으면 이미지 변경
                     binding.courseDateBox.setImageResource(R.drawable.coursedateaf_box)
                 }
             }
