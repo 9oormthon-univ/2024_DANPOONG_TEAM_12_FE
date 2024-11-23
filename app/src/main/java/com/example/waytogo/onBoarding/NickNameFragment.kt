@@ -13,6 +13,8 @@ import android.view.ViewGroup
 import android.widget.ImageButton
 import android.widget.Toast
 import androidx.core.content.ContextCompat
+import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.WindowInsetsControllerCompat
 import com.example.waytogo.BaseFragment
 import com.example.waytogo.R
 import com.example.waytogo.databinding.FragmentNickNameBinding
@@ -51,10 +53,15 @@ class NickNameFragment : BaseFragment<FragmentNickNameBinding>(FragmentNickNameB
 
         // 중복 체크
         binding.checkBtn.setOnClickListener{
-            if (nickname.text.toString() == "조건희"){
-                binding.nicknameEl.apply {
-                    setErrorTextColor(ColorStateList.valueOf(ContextCompat.getColor(requireContext(), R.color.blue)))
-                    error = "사용가능한 닉네임 입니다"
+            binding.doubleCheckTv.visibility = View.VISIBLE
+            activity?.let { it1 -> WindowInsetsControllerCompat(it1.window, it1.window.decorView).hide(WindowInsetsCompat.Type.ime()) }
+            if (nickname.text.toString().count() >= 1){
+                binding.nicknameEt.apply {
+                    setBackgroundResource(R.drawable.edittext_input_background)
+                    binding.doubleCheckTv.apply{
+                        text = "사용가능한 닉네임 입니다"
+                        setTextColor(ColorStateList.valueOf(ContextCompat.getColor(requireContext(), R.color.blue)))
+                    }
                 }
                 nextButton.apply {
                     setTextColor(ContextCompat.getColor(requireContext(), R.color.white))
@@ -62,10 +69,11 @@ class NickNameFragment : BaseFragment<FragmentNickNameBinding>(FragmentNickNameB
                 }
             }
             else{
-                binding.nicknameEl.apply {
-
-                    setErrorTextColor(ColorStateList.valueOf(ContextCompat.getColor(requireContext(), R.color.gray300)))
-                    error = "이미 사용중인 닉네임 입니다"
+                binding.nicknameEt.apply {
+                    binding.doubleCheckTv.apply{
+                        text = "이미 사용중인 닉네임 입니다"
+                        setTextColor(ColorStateList.valueOf(ContextCompat.getColor(requireContext(), R.color.gray300)))
+                    }
                 }
                 nextButton.apply {
                     setTextColor(ContextCompat.getColor(requireContext(), R.color.blue))

@@ -9,3 +9,9 @@ object Constants {
 object API {
     const val NATIVE_KEY : String = BuildConfig.NATIVE_KEY
 }
+
+enum class RESPONSE_STATE {
+    SUCCESS,
+    FAIL
+}
+

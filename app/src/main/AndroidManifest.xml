@@ -16,7 +16,19 @@
         android:theme="@style/Theme.WayToGo"
         tools:targetApi="31">
         <activity
+            android:name=".CarPool.CarPoolPostUpActivity"
+            android:exported="false" />
+        <activity
             android:name=".onBoarding.OnBoardingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CarPool.CarPoolActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan">
+
+        </activity>
+        <activity
+            android:name=".CarPool.CarPoolApply.CarPoolApplyActivity"
             android:exported="false" />
 
         <meta-data
@@ -39,15 +51,13 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".onBoarding.LoginActivity"
-            android:exported="false" />
-        <activity
-            android:name=".SplashActivity"
-            android:exported="true">
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
         </activity>
         <activity
-            android:name="com.example.waytogo.MainActivity"
+            android:name=".MainActivity"
             android:exported="false" /> <!-- 카카오 로그인, 인가코드를 받기 위한 액티비티 -->
         <activity
             android:name="com.kakao.sdk.auth.AuthCodeHandlerActivity"
