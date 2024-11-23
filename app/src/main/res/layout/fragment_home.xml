@@ -1,0 +1,634 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".HomeFragment">
+
+    <ImageView
+        android:id="@+id/homematching_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/homematching_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="40dp"
+        android:paddingBottom="40dp"/>
+
+    <ImageView
+        android:id="@+id/homecarfool_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/homecarfool_btn"
+        app:layout_constraintTop_toTopOf="@id/homematching_btn"
+        app:layout_constraintStart_toEndOf="@id/homematching_btn"
+        android:layout_marginLeft="8dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/homematching_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="40dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/homecurved_background">
+
+            <TextView
+                android:id="@+id/hometitle1_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="맞춤 추천 여행지 TOP3"
+                android:fontFamily="@font/applesdgothicneo_eb"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="32dp"
+                android:layout_marginLeft="25dp" />
+
+            <ImageView
+                android:id="@+id/homedoover_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/homedoover_btn"
+                app:layout_constraintTop_toTopOf="@id/hometitle1_tv"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginRight="102dp"/>
+
+            <TextView
+                android:id="@+id/homedoover_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="다시 추천 받기"
+                android:textSize="12sp"
+                android:fontFamily="@font/applesdgothicneo_l"
+                android:textColor="@color/gray300"
+                app:layout_constraintTop_toTopOf="@id/homedoover_btn"
+                app:layout_constraintBottom_toBottomOf="@id/homedoover_btn"
+                app:layout_constraintStart_toEndOf="@id/homedoover_btn"
+                android:layout_marginLeft="9dp" />
+            
+            <View
+                android:id="@+id/hometitleline"
+                android:layout_width="364dp"
+                android:layout_height="1dp"
+                android:background="@color/gray200"
+                app:layout_constraintTop_toBottomOf="@id/hometitle1_tv"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="16dp"/>
+
+<!--            frame1-->
+
+            <ImageView
+                android:id="@+id/hometitle1_frame1_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/homeframe_iv"
+                app:layout_constraintTop_toBottomOf="@id/hometitleline"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="25dp"/>
+
+            <ImageView
+                android:id="@+id/hometitle1_frame1_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/testimg"
+                app:layout_constraintTop_toTopOf="@id/hometitle1_frame1_iv"
+                app:layout_constraintStart_toStartOf="@id/hometitle1_frame1_iv"/>
+
+            <ImageView
+                android:id="@+id/hometitle1_frame1_heartbf_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/homeheartbf_iv"
+                app:layout_constraintStart_toStartOf="@id/hometitle1_frame1_iv"
+                app:layout_constraintBottom_toBottomOf="@id/hometitle1_frame1_iv"
+                android:layout_marginLeft="9dp"
+                android:layout_marginBottom="40dp"/>
+
+            <TextView
+                android:id="@+id/hometitle1_frame1_city_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="춘천"
+                android:fontFamily="@font/applesdgothicneo_m"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@id/hometitle1_frame1_iv"
+                app:layout_constraintEnd_toEndOf="@id/hometitle1_frame1_iv"
+                app:layout_constraintBottom_toBottomOf="@id/hometitle1_frame1_iv"
+                android:layout_marginBottom="29dp"/>
+
+            <TextView
+                android:id="@+id/hometitle1_frame1_intro_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="빛나는 밤의 도시"
+                android:textColor="@color/gray300"
+                android:fontFamily="@font/applesdgothicneo_m"
+                app:layout_constraintStart_toStartOf="@id/hometitle1_frame1_iv"
+                app:layout_constraintEnd_toEndOf="@id/hometitle1_frame1_iv"
+                app:layout_constraintBottom_toBottomOf="@id/hometitle1_frame1_iv"
+                android:layout_marginBottom="9dp"/>
+
+<!--            frame2-->
+            <ImageView
+                android:id="@+id/hometitle1_frame2_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/homeframe_iv"
+                app:layout_constraintStart_toEndOf="@id/hometitle1_frame1_iv"
+                app:layout_constraintTop_toTopOf="@id/hometitle1_frame1_iv"
+                android:layout_marginLeft="8dp"/>
+
+            <ImageView
+                android:id="@+id/hometitle1_frame2_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/testimg2"
+                app:layout_constraintTop_toTopOf="@id/hometitle1_frame2_iv"
+                app:layout_constraintStart_toStartOf="@id/hometitle1_frame2_iv"/>
+
+            <ImageView
+                android:id="@+id/hometitle1_frame2_heartbf_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/homeheartbf_iv"
+                app:layout_constraintStart_toStartOf="@id/hometitle1_frame2_iv"
+                app:layout_constraintBottom_toBottomOf="@id/hometitle1_frame2_iv"
+                android:layout_marginLeft="9dp"
+                android:layout_marginBottom="40dp"/>
+
+            <TextView
+                android:id="@+id/hometitle1_frame2_city_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="제주"
+                android:fontFamily="@font/applesdgothicneo_m"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@id/hometitle1_frame2_iv"
+                app:layout_constraintEnd_toEndOf="@id/hometitle1_frame2_iv"
+                app:layout_constraintBottom_toBottomOf="@id/hometitle1_frame2_iv"
+                android:layout_marginBottom="29dp" />
+
+            <TextView
+                android:id="@+id/hometitle1_frame2_intro_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="귤 따먹자"
+                android:textColor="@color/gray300"
+                android:fontFamily="@font/applesdgothicneo_m"
+                app:layout_constraintStart_toStartOf="@id/hometitle1_frame2_iv"
+                app:layout_constraintEnd_toEndOf="@id/hometitle1_frame2_iv"
+                app:layout_constraintBottom_toBottomOf="@id/hometitle1_frame2_iv"
+                android:layout_marginBottom="9dp" />
+
+<!--            frame3-->
+
+            <ImageView
+                android:id="@+id/hometitle1_frame3_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/homeframe_iv"
+                app:layout_constraintTop_toTopOf="@id/hometitle1_frame2_iv"
+                app:layout_constraintStart_toEndOf="@id/hometitle1_frame2_iv"
+                android:layout_marginLeft="8dp"/>
+
+            <ImageView
+                android:id="@+id/hometitle1_frame3_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/testimg3"
+                app:layout_constraintStart_toStartOf="@id/hometitle1_frame3_iv"
+                app:layout_constraintTop_toTopOf="@id/hometitle1_frame3_iv"/>
+
+            <ImageView
+                android:id="@+id/hometitle1_frame3_heartbf_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/homeheartbf_iv"
+                app:layout_constraintStart_toStartOf="@id/hometitle1_frame3_iv"
+                app:layout_constraintBottom_toBottomOf="@id/hometitle1_frame3_iv"
+                android:layout_marginLeft="9dp"
+                android:layout_marginBottom="40dp"/>
+
+
+            <TextView
+                android:id="@+id/hometitle1_frame3_city_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="부산"
+                android:fontFamily="@font/applesdgothicneo_m"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@id/hometitle1_frame3_iv"
+                app:layout_constraintEnd_toEndOf="@id/hometitle1_frame3_iv"
+                app:layout_constraintBottom_toBottomOf="@id/hometitle1_frame3_iv"
+                android:layout_marginBottom="29dp" />
+
+            <TextView
+                android:id="@+id/hometitle1_frame3_intro_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="낙곱새 먹으러"
+                android:textColor="@color/gray300"
+                android:fontFamily="@font/applesdgothicneo_m"
+                app:layout_constraintStart_toStartOf="@id/hometitle1_frame3_iv"
+                app:layout_constraintEnd_toEndOf="@id/hometitle1_frame3_iv"
+                app:layout_constraintBottom_toBottomOf="@id/hometitle1_frame3_iv"
+                android:layout_marginBottom="9dp" />
+
+<!--            title2-->
+
+            <TextView
+                android:id="@+id/hometitle2_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="인기 여행지"
+                android:fontFamily="@font/applesdgothicneo_eb"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/hometitle1_frame1_iv"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="41dp"
+                android:layout_marginLeft="24dp" />
+
+            <ImageView
+                android:id="@+id/hometitle2_token1_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/hometitle2_token1_iv"
+                app:layout_constraintTop_toTopOf="@id/hometitle2_tv"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginRight="193dp"/>
+
+            <ImageView
+                android:id="@+id/hometitle2_token2_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/hometitle2_token2_iv"
+                app:layout_constraintTop_toTopOf="@id/hometitle2_tv"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginRight="89dp" />
+
+            <ImageView
+                android:id="@+id/hometitle2_token3_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/hometitle2_token3_iv"
+                app:layout_constraintTop_toTopOf="@id/hometitle2_tv"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginRight="24dp" />
+
+            <View
+                android:id="@+id/hometitle2line"
+                android:layout_width="364dp"
+                android:layout_height="1dp"
+                android:background="@color/gray200"
+                app:layout_constraintTop_toBottomOf="@id/hometitle2_tv"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="16dp"/>
+
+<!--            frame1-->
+
+            <ImageView
+                android:id="@+id/hometitle2_frame1_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/homeframe_iv"
+                app:layout_constraintTop_toBottomOf="@id/hometitle2line"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="16dp" />
+
+            <ImageView
+                android:id="@+id/hometitle2_frame1_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/testimg4"
+                app:layout_constraintStart_toStartOf="@id/hometitle2_frame1_iv"
+                app:layout_constraintTop_toTopOf="@id/hometitle2_frame1_iv" />
+
+            <ImageView
+                android:id="@+id/hometitle2_frame1_heartbf_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/homeheartbf_iv"
+                app:layout_constraintStart_toStartOf="@id/hometitle2_frame1_iv"
+                app:layout_constraintBottom_toBottomOf="@id/hometitle2_frame1_iv"
+                android:layout_marginLeft="9dp"
+                android:layout_marginBottom="40dp"/>
+
+            <TextView
+                android:id="@+id/hometitle2_frame1_city_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="전주"
+                android:fontFamily="@font/applesdgothicneo_m"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@id/hometitle2_frame1_iv"
+                app:layout_constraintEnd_toEndOf="@id/hometitle2_frame1_iv"
+                app:layout_constraintBottom_toBottomOf="@id/hometitle2_frame1_iv"
+                android:layout_marginBottom="29dp" />
+
+            <TextView
+                android:id="@+id/hometitle2_frame1_intro_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="전통문화 체험"
+                android:textColor="@color/gray300"
+                android:fontFamily="@font/applesdgothicneo_m"
+                app:layout_constraintStart_toStartOf="@id/hometitle2_frame1_iv"
+                app:layout_constraintEnd_toEndOf="@id/hometitle2_frame1_iv"
+                app:layout_constraintBottom_toBottomOf="@id/hometitle2_frame1_iv"
+                android:layout_marginBottom="9dp" />
+
+<!--            frame2-->
+
+            <ImageView
+                android:id="@+id/hometitle2_frame2_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/homeframe_iv"
+                app:layout_constraintStart_toEndOf="@id/hometitle2_frame1_iv"
+                app:layout_constraintTop_toTopOf="@id/hometitle2_frame1_iv"
+                android:layout_marginLeft="8dp"/>
+
+            <ImageView
+                android:id="@+id/hometitle2_frame2_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/testimg5"
+                app:layout_constraintTop_toTopOf="@id/hometitle2_frame2_iv"
+                app:layout_constraintStart_toStartOf="@id/hometitle2_frame2_iv"/>
+
+            <ImageView
+                android:id="@+id/hometitle2_frame2_heartbf_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/homeheartbf_iv"
+                app:layout_constraintStart_toStartOf="@id/hometitle2_frame2_iv"
+                app:layout_constraintBottom_toBottomOf="@id/hometitle2_frame2_iv"
+                android:layout_marginLeft="9dp"
+                android:layout_marginBottom="40dp"/>
+
+            <TextView
+                android:id="@+id/hometitle2_frame2_city_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="경주"
+                android:fontFamily="@font/applesdgothicneo_m"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@id/hometitle2_frame2_iv"
+                app:layout_constraintEnd_toEndOf="@id/hometitle2_frame2_iv"
+                app:layout_constraintBottom_toBottomOf="@id/hometitle2_frame2_iv"
+                android:layout_marginBottom="29dp" />
+
+            <TextView
+                android:id="@+id/hometitle2_frame2_intro_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="역사와 문화의 공.."
+                android:textColor="@color/gray300"
+                android:fontFamily="@font/applesdgothicneo_m"
+                app:layout_constraintStart_toStartOf="@id/hometitle2_frame2_iv"
+                app:layout_constraintEnd_toEndOf="@id/hometitle2_frame2_iv"
+                app:layout_constraintBottom_toBottomOf="@id/hometitle2_frame2_iv"
+                android:layout_marginBottom="9dp" />
+
+<!--            frame3-->
+
+            <ImageView
+                android:id="@+id/hometitle2_frame3_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/homeframe_iv"
+                app:layout_constraintTop_toTopOf="@id/hometitle2_frame2_iv"
+                app:layout_constraintStart_toEndOf="@id/hometitle2_frame2_iv"
+                android:layout_marginLeft="8dp"/>
+
+            <ImageView
+                android:id="@+id/hometitle2_frame3_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/testimg6"
+                app:layout_constraintStart_toStartOf="@id/hometitle2_frame3_iv"
+                app:layout_constraintTop_toTopOf="@id/hometitle2_frame3_iv"/>
+
+            <ImageView
+                android:id="@+id/hometitle2_frame3_heartbf_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/homeheartbf_iv"
+                app:layout_constraintStart_toStartOf="@id/hometitle2_frame3_iv"
+                app:layout_constraintBottom_toBottomOf="@id/hometitle2_frame3_iv"
+                android:layout_marginLeft="9dp"
+                android:layout_marginBottom="40dp"/>
+
+
+            <TextView
+                android:id="@+id/hometitle2_frame3_city_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="여수"
+                android:fontFamily="@font/applesdgothicneo_m"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@id/hometitle2_frame3_iv"
+                app:layout_constraintEnd_toEndOf="@id/hometitle2_frame3_iv"
+                app:layout_constraintBottom_toBottomOf="@id/hometitle2_frame3_iv"
+                android:layout_marginBottom="29dp" />
+
+            <TextView
+                android:id="@+id/hometitle2_frame3_intro_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="볼거리 즐길거리.."
+                android:textColor="@color/gray300"
+                android:fontFamily="@font/applesdgothicneo_m"
+                app:layout_constraintStart_toStartOf="@id/hometitle2_frame3_iv"
+                app:layout_constraintEnd_toEndOf="@id/hometitle2_frame3_iv"
+                app:layout_constraintBottom_toBottomOf="@id/hometitle2_frame3_iv"
+                android:layout_marginBottom="9dp" />
+
+<!--            frame4-->
+
+            <ImageView
+                android:id="@+id/hometitle2_frame4_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/homeframe_iv"
+                app:layout_constraintTop_toBottomOf="@id/hometitle2_frame1_iv"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="16dp"/>
+
+            <ImageView
+                android:id="@+id/hometitle2_frame4_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/testimg7"
+                app:layout_constraintStart_toStartOf="@id/hometitle2_frame4_iv"
+                app:layout_constraintTop_toTopOf="@id/hometitle2_frame4_iv"/>
+
+            <ImageView
+                android:id="@+id/hometitle2_frame4_heartbf_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/homeheartbf_iv"
+                app:layout_constraintStart_toStartOf="@id/hometitle2_frame4_iv"
+                app:layout_constraintBottom_toBottomOf="@id/hometitle2_frame4_iv"
+                android:layout_marginLeft="9dp"
+                android:layout_marginBottom="40dp"/>
+
+
+            <TextView
+                android:id="@+id/hometitle2_frame4_city_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="아산"
+                android:fontFamily="@font/applesdgothicneo_m"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@id/hometitle2_frame4_iv"
+                app:layout_constraintEnd_toEndOf="@id/hometitle2_frame4_iv"
+                app:layout_constraintBottom_toBottomOf="@id/hometitle2_frame4_iv"
+                android:layout_marginBottom="29dp" />
+
+            <TextView
+                android:id="@+id/hometitle2_frame4_intro_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="하루의 피로를.."
+                android:textColor="@color/gray300"
+                android:fontFamily="@font/applesdgothicneo_m"
+                app:layout_constraintStart_toStartOf="@id/hometitle2_frame4_iv"
+                app:layout_constraintEnd_toEndOf="@id/hometitle2_frame4_iv"
+                app:layout_constraintBottom_toBottomOf="@id/hometitle2_frame4_iv"
+                android:layout_marginBottom="9dp" />
+
+<!--            frame5-->
+
+            <ImageView
+                android:id="@+id/hometitle2_frame5_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/homeframe_iv"
+                app:layout_constraintStart_toEndOf="@id/hometitle2_frame4_iv"
+                app:layout_constraintTop_toTopOf="@id/hometitle2_frame4_iv"
+                android:layout_marginLeft="8dp"/>
+
+            <ImageView
+                android:id="@+id/hometitle2_frame5_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/testimg8"
+                app:layout_constraintTop_toTopOf="@id/hometitle2_frame5_iv"
+                app:layout_constraintStart_toStartOf="@id/hometitle2_frame5_iv"/>
+
+            <ImageView
+                android:id="@+id/hometitle2_frame5_heartbf_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/homeheartbf_iv"
+                app:layout_constraintStart_toStartOf="@id/hometitle2_frame5_iv"
+                app:layout_constraintBottom_toBottomOf="@id/hometitle2_frame5_iv"
+                android:layout_marginLeft="9dp"
+                android:layout_marginBottom="40dp"/>
+
+            <TextView
+                android:id="@+id/hometitle2_frame5_city_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="정읍"
+                android:fontFamily="@font/applesdgothicneo_m"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@id/hometitle2_frame5_iv"
+                app:layout_constraintEnd_toEndOf="@id/hometitle2_frame5_iv"
+                app:layout_constraintBottom_toBottomOf="@id/hometitle2_frame5_iv"
+                android:layout_marginBottom="29dp" />
+
+            <TextView
+                android:id="@+id/hometitle2_frame5_intro_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="최고의 가을 풍경.."
+                android:textColor="@color/gray300"
+                android:fontFamily="@font/applesdgothicneo_m"
+                app:layout_constraintStart_toStartOf="@id/hometitle2_frame5_iv"
+                app:layout_constraintEnd_toEndOf="@id/hometitle2_frame5_iv"
+                app:layout_constraintBottom_toBottomOf="@id/hometitle2_frame5_iv"
+                android:layout_marginBottom="9dp" />
+
+<!--            frame6-->
+
+            <ImageView
+                android:id="@+id/hometitle2_frame6_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/homeframe_iv"
+                app:layout_constraintTop_toTopOf="@id/hometitle2_frame5_iv"
+                app:layout_constraintStart_toEndOf="@id/hometitle2_frame5_iv"
+                android:layout_marginLeft="8dp"/>
+
+            <ImageView
+                android:id="@+id/hometitle2_frame6_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/testimg9"
+                app:layout_constraintStart_toStartOf="@id/hometitle2_frame6_iv"
+                app:layout_constraintTop_toTopOf="@id/hometitle2_frame6_iv"/>
+
+            <ImageView
+                android:id="@+id/hometitle2_frame6_heartbf_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/homeheartbf_iv"
+                app:layout_constraintStart_toStartOf="@id/hometitle2_frame6_iv"
+                app:layout_constraintBottom_toBottomOf="@id/hometitle2_frame6_iv"
+                android:layout_marginLeft="9dp"
+                android:layout_marginBottom="40dp"/>
+
+
+            <TextView
+                android:id="@+id/hometitle2_frame6_city_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="영주"
+                android:fontFamily="@font/applesdgothicneo_m"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@id/hometitle2_frame6_iv"
+                app:layout_constraintEnd_toEndOf="@id/hometitle2_frame6_iv"
+                app:layout_constraintBottom_toBottomOf="@id/hometitle2_frame6_iv"
+                android:layout_marginBottom="29dp" />
+
+            <TextView
+                android:id="@+id/hometitle2_frame6_intro_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="영남의 삼형제 관문.."
+                android:textColor="@color/gray300"
+                android:fontFamily="@font/applesdgothicneo_m"
+                app:layout_constraintStart_toStartOf="@id/hometitle2_frame6_iv"
+                app:layout_constraintEnd_toEndOf="@id/hometitle2_frame6_iv"
+                app:layout_constraintBottom_toBottomOf="@id/hometitle2_frame6_iv"
+                android:layout_marginBottom="9dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

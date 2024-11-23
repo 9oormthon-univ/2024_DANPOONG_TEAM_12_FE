@@ -55,6 +55,13 @@ android {
         manifestPlaceholders["NATIVE_KEY"] = properties.getProperty("manifest_native_key")
     }
 
+
+
+    buildFeatures {
+        viewBinding = true
+        buildConfig = true
+    }
+
     buildTypes {
         release {
             isMinifyEnabled = false
@@ -106,6 +113,8 @@ dependencies {
     // Hilt
     implementation("com.google.dagger:hilt-android:2.51.1")
     kapt("com.google.dagger:hilt-compiler:2.51.1")
+    implementation("androidx.navigation:navigation-fragment-ktx:2.8.4")
+    implementation("androidx.navigation:navigation-ui-ktx:2.8.4")
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
@@ -121,4 +130,6 @@ dependencies {
 // Allow references to generated code
 kapt {
     correctErrorTypes = true
+
+
 }
