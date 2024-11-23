@@ -87,14 +87,14 @@ class CarPoolApplicationFragment : BaseFragment<FragmentCarPoolApplicationBindin
 
     // 작성한 내역 (Apply List) 리사이클러 뷰 어댑터 설정
     private fun setList(){
-        val adapter = CarPoolApplyAdapter(itemList)
+        val adapter = CarPoolApplyAdapter(itemList, childFragmentManager, viewModel)
         binding.carpoolApplyListRv.apply {
             setAdapter(adapter)
             layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL,false)
         }
         adapter.setItemClickListener(object : CarPoolApplyAdapter.onItemClickListener {
             override fun onItemClick(position: Int) {
-//                viewModel.applyTitle.value = itemList[position].title
+
             }
         })
     }

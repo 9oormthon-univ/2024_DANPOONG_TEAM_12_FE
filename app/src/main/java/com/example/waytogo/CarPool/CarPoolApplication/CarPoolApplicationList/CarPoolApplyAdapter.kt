@@ -2,11 +2,18 @@ package com.example.waytogo.CarPool.CarPoolApplication.CarPoolApplicationList
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.activityViewModels
 import androidx.recyclerview.widget.RecyclerView
+import com.example.waytogo.CarPool.CarPoolApplication.CarPoolViewModel
+import com.example.waytogo.CarPool.CarPoolModal.CarpoolApplicationModal
+import com.example.waytogo.CarPool.CarPoolModal.CarpoolCancelModal
 import com.example.waytogo.databinding.CarpoolApplyLayoutBinding
+import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
-class CarPoolApplyAdapter(val items: MutableList<ApplyList>) :
-    RecyclerView.Adapter<CarPoolApplyAdapter.ViewHolder>() {
+class CarPoolApplyAdapter(val items: MutableList<ApplyList>, val fragmentManager: FragmentManager, val viewModel: CarPoolViewModel)
+    : RecyclerView.Adapter<CarPoolApplyAdapter.ViewHolder>() {
+
     interface onItemClickListener {
         fun onItemClick(position: Int)
     }
@@ -60,6 +67,17 @@ class CarPoolApplyAdapter(val items: MutableList<ApplyList>) :
             destination.text = items.destination
             date.text = items.date
             time.text = items.time
+
+            binding.cancelButton.setOnClickListener {
+                applyModal(CarpoolCancelModal())
+            }
+            viewModel.applyTitle.value = items.title
         }
+    }
+
+    // 모달 창 열기 함수
+    private fun applyModal(modal: BottomSheetDialogFragment) {
+        val carpoolModal = modal
+        carpoolModal.show(fragmentManager, CarpoolApplicationModal.TAG)
     }
 }

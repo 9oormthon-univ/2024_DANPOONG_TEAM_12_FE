@@ -12,7 +12,7 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="@color/blue"
+        android:background="@color/white"
         android:gravity="center_vertical"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -29,18 +29,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="CARPOOL"
-            android:textColor="@color/white"
+            android:textColor="@color/blue"
             android:textSize="22sp"
             android:fontFamily="@font/applesdgothicneo_h"
             android:layout_marginStart="10dp"/>
 
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/notification_icon"
-            android:background="@android:color/transparent"
-            android:layout_gravity="end"
-            android:layout_marginEnd="24dp"/>
 
     </androidx.appcompat.widget.Toolbar>
 
@@ -81,15 +74,35 @@
                 android:paddingHorizontal="8dp"
                 android:paddingVertical="30dp">
 
-                <ImageButton
-                    android:id="@+id/photo_upload_ib"
+                <LinearLayout
+                    android:id="@+id/photo_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <ImageButton
+                        android:id="@+id/photo_upload_ib"
+                        android:layout_width="74dp"
+                        android:layout_height="74dp"
+                        android:background="@drawable/back_button"
+                        android:src="@drawable/photo_upload_icon"
+                        android:paddingHorizontal="18dp"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp"
+                        android:layout_marginEnd="4dp"
+                        />
+                </LinearLayout>
+
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/back_button"
-                    android:paddingHorizontal="18dp"
-                    android:paddingTop="15dp"
-                    android:paddingBottom="8dp"
-                    android:src="@drawable/photo_upload_icon" />
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/applesdgothicneo_m"
+                    android:text="최대 4장까지 첨부가능합니다"
+                    android:textSize="12sp"
+                    android:textColor="@color/gray300"
+                    android:layout_gravity="end"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -256,7 +269,7 @@
                     android:id="@+id/post_content_el"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
-                    android:layout_height="218dp"
+                    android:layout_height="230dp"
                     android:layout_marginTop="12dp"
                     android:hint="내용을 입력해주세요"
                     app:counterEnabled="true"
@@ -288,11 +301,12 @@
         android:layout_marginTop="400dp"
         android:background="@drawable/next_button"
         android:layout_marginHorizontal="32dp"
-        android:text="계속하기"
-        android:textColor="@color/blue"
+        android:layout_marginBottom="20dp"
+        android:text="글 올리기"
+        android:textColor="@color/white"
         android:textSize="15sp"
         android:fontFamily="@font/applesdgothicneo_b"
-        android:enabled="false"
+        android:enabled="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>

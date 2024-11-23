@@ -42,6 +42,16 @@ android {
             "REST_API_KEY",
             properties.getProperty("rest_api_key")
         )
+        buildConfigField(
+            "String",
+            "BASE_URL",
+            properties.getProperty("base_url")
+        )
+        buildConfigField(
+            "String",
+            "TOKEN_KEY",
+            properties.getProperty("token_key")
+        )
         manifestPlaceholders["NATIVE_KEY"] = properties.getProperty("manifest_native_key")
     }
 

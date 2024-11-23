@@ -1,14 +1,19 @@
 package com.example.waytogo.CarPool
 
 import android.app.DatePickerDialog
-import android.app.TimePickerDialog
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
+import android.provider.MediaStore
+import android.view.View
 import android.widget.Button
+import android.widget.ImageButton
+import android.widget.ImageView
+import android.widget.LinearLayout
 import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
+import androidx.activity.result.ActivityResultLauncher
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.example.waytogo.R
 import com.example.waytogo.databinding.ActivityCarPoolPostUpBinding
 import java.util.Calendar
@@ -16,14 +21,66 @@ import java.util.Calendar
 class CarPoolPostUpActivity : AppCompatActivity() {
     private var startDate: Calendar? = null
     private var endDate: Calendar? = null
-    private var startTime: Calendar? = null
-    private var endTime: Calendar? = null
-    private lateinit var binding : ActivityCarPoolPostUpBinding
+
+    private lateinit var binding: ActivityCarPoolPostUpBinding
+    private lateinit var photoPickerLauncher: ActivityResultLauncher<Intent>
+    private val maxPhotos = 5
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityCarPoolPostUpBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        val photoUploadButton = binding.photoUploadIb
+        val photoContainer = binding.photoContainer
+
+        // Activity Result Launcher 등록
+        photoPickerLauncher = registerForActivityResult(
+            ActivityResultContracts.StartActivityForResult()
+        ) { result ->
+            if (result.resultCode == RESULT_OK) {
+                result.data?.data?.let { uri ->
+                    addPhotoToContainer(uri)
+                }
+            }
+        }
+
+        // 사진 업로드 버튼 클릭 리스너
+        photoUploadButton.setOnClickListener {
+            if (photoContainer.childCount < maxPhotos) {
+                val intent = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
+                intent.type = "image/*"
+                photoPickerLauncher.launch(intent)
+            } else {
+                Toast.makeText(this, "최대 4장까지 추가할 수 있습니다.", Toast.LENGTH_SHORT).show()
+            }
+        }
+    }
+
+    // 이미지 URI를 PhotoContainer에 추가
+    private fun addPhotoToContainer(uri: Uri) {
+        val photoContainer = binding.photoContainer
+
+        // 새로운 이미지 추가
+        val imageView = ImageView(this).apply {
+            layoutParams = LinearLayout.LayoutParams(
+                resources.getDimensionPixelSize(R.dimen.photo_width),
+                resources.getDimensionPixelSize(R.dimen.photo_height)
+            ).apply {
+                marginEnd = resources.getDimensionPixelSize(R.dimen.photo_margin)
+            }
+            setImageURI(uri)
+            scaleType = ImageView.ScaleType.CENTER_CROP
+        }
+        photoContainer.addView(imageView, photoContainer.childCount)
+
+        // 최대 사진 갯수 확인 후 버튼 숨기기
+        if (photoContainer.childCount >= maxPhotos) {
+            binding.photoUploadIb.visibility = View.GONE
+        }
+
+
+
 
         // DatePicker
         val startDateButton = binding.startDateBtn
@@ -67,7 +124,14 @@ class CarPoolPostUpActivity : AppCompatActivity() {
                 endTimeButton.text = formatTimeString(hour, minute)
             }.show()
         }
+
+        binding.postUpBtn.setOnClickListener {
+            val intent = Intent(this, CarPoolActivity::class.java)
+            intent.putExtra("showDialog", true) // 다이얼로그 표시 여부 전달
+            startActivity(intent)
+        }
     }
+
 
     // DatePickerDialog 띄우기
     private fun showDatePickerDialog(onDateSelected: (Int, Int, Int) -> Unit) {

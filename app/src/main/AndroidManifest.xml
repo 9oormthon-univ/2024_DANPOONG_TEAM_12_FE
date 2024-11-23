@@ -19,20 +19,13 @@
             android:name=".CarPool.CarPoolPostUpActivity"
             android:exported="false" />
         <activity
-            android:name=".CarPool.CarPoolApplication.CarPoolApplicationActivity"
-            android:exported="false" />
-        <activity
             android:name=".onBoarding.OnBoardingActivity"
             android:exported="false" />
         <activity
             android:name=".CarPool.CarPoolActivity"
-            android:exported="true"
+            android:exported="false"
             android:windowSoftInputMode="adjustPan">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".CarPool.CarPoolApply.CarPoolApplyActivity"
@@ -50,7 +43,13 @@
             android:exported="false" />
         <activity
             android:name=".SplashActivity"
-            android:exported="false" />
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".MainActivity"
             android:exported="false" /> <!-- 카카오 로그인, 인가코드를 받기 위한 액티비티 -->

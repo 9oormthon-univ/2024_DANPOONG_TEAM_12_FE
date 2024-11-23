@@ -1,99 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".CarPool.CarPoolApplication.CarPoolApplicationFragment">
+    android:layout_height="match_parent">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/list_ll"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="5dp"
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/apply_tv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="지원한 내역"
-            android:textSize="13sp"
-            android:visibility="visible"
-            android:textColor="@color/gray300"
-            android:fontFamily="@font/applesdgothicneo_l"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/write_tv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="작성한 내역"
-            android:textSize="13sp"
-            android:visibility="invisible"
-            android:textColor="@color/gray300"
-            android:fontFamily="@font/applesdgothicneo_l"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/list_ll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_marginStart="4dp"
-            android:layout_marginTop="2dp"
-            android:src="@drawable/navigation_down_icon"
-            app:layout_constraintStart_toEndOf="@id/apply_tv"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"/>
+                <TextView
+                    android:id="@+id/apply_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/applesdgothicneo_l"
+                    android:text="지원한 내역"
+                    android:textColor="@color/gray300"
+                    android:textSize="13sp"
+                    android:visibility="visible"
+                    android:layout_marginEnd="4dp"
+                    app:layout_constraintEnd_toStartOf="@id/list_iv"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+                <TextView
+                    android:id="@+id/write_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/applesdgothicneo_l"
+                    android:text="작성한 내역"
+                    android:textColor="@color/gray300"
+                    android:textSize="13sp"
+                    android:visibility="invisible"
+                    android:layout_marginEnd="4dp"
+                    app:layout_constraintEnd_toStartOf="@id/list_iv"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/no_application_tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="카풀 내역이 존재하지 않습니다"
-        android:textColor="@color/gray300"
-        android:textSize="13sp"
-        android:fontFamily="@font/applesdgothicneo_l"
-        android:layout_marginTop="23dp"
-        android:visibility="invisible"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/list_ll"/>
+                <ImageView
+                    android:id="@+id/list_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/navigation_down_icon"
+                    app:layout_constraintBottom_toBottomOf="@id/apply_tv"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/carpool_apply_list_rv"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:visibility="invisible"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+            <TextView
+                android:id="@+id/no_application_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:fontFamily="@font/applesdgothicneo_l"
+                android:text="카풀 내역이 존재하지 않습니다"
+                android:textColor="@color/gray300"
+                android:textSize="13sp"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/list_ll" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/carpool_write_list_rv"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginVertical="20dp"
-        android:visibility="invisible"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/carpool_apply_list_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/log_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="ㅋㅋ 눌러봐"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/carpool_write_list_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

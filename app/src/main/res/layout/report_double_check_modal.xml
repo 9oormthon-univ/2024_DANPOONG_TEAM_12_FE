@@ -19,30 +19,19 @@
         android:id="@+id/cancel_title_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="제목제목Titel"
+        android:text="000님을 신고하고 차단합니다"
         android:textSize="15sp"
         android:fontFamily="@font/applesdgothicneo_eb"
         android:layout_marginTop="36dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/scroll_icon_iv"/>
 
-    <TextView
-        android:id="@+id/explain_tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="지원을 취소합니다.\n정말 취소하시겠습니까?"
-        android:textSize="15sp"
-        android:fontFamily="@font/applesdgothicneo_l"
-        android:layout_marginTop="3dp"
-        app:layout_constraintTop_toBottomOf="@id/cancel_title_tv"
-        app:layout_constraintStart_toStartOf="parent"/>
-
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginVertical="25dp"
-        app:layout_constraintTop_toBottomOf="@id/explain_tv"
+        app:layout_constraintTop_toBottomOf="@id/cancel_title_tv"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent">
@@ -52,7 +41,7 @@
             android:layout_width="160dp"
             android:layout_height="40dp"
             android:background="@drawable/back_button"
-            android:text="뒤로 가기"
+            android:text="닫기"
             android:textColor="@color/gray200"
             android:textSize="15sp"
             android:fontFamily="@font/applesdgothicneo_b"
@@ -63,7 +52,7 @@
             android:layout_width="160dp"
             android:layout_height="40dp"
             android:background="@drawable/cancel_button"
-            android:text="지원 취소"
+            android:text="신고 / 차단"
             android:textColor="@color/blue"
             android:textSize="15sp"
             android:fontFamily="@font/applesdgothicneo_b"

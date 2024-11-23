@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 사진 크기와 여백 정의 -->
+    <dimen name="photo_width">74dp</dimen>
+    <dimen name="photo_height">74dp</dimen>
+    <dimen name="photo_margin">8dp</dimen>
+</resources>

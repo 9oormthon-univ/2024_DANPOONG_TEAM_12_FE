@@ -77,7 +77,7 @@
         android:background="@drawable/next_button"
         android:layout_marginHorizontal="32dp"
         android:layout_marginBottom="80dp"
-        android:text="건더뛰고 여행 시작하기"
+        android:text="건너뛰고 여행 시작하기"
         android:textColor="@color/white"
         android:textSize="15sp"
         android:fontFamily="@font/applesdgothicneo_b"
