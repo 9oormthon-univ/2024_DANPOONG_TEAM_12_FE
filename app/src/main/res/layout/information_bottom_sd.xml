@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    android:background="@drawable/homecurved_background"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <View
+        android:layout_width="120dp"
+        android:layout_height="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/course_curved_background" />
+
+    <TextView
+        android:id="@+id/informationTitle1_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="지역별"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:fontFamily="@font/applesdgothicneo_eb"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="60dp"/>
+
+    <View
+        android:layout_width="364dp"
+        android:layout_height="1dp"
+        android:background="@color/gray100"
+        app:layout_constraintTop_toBottomOf="@id/informationTitle1_tv"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="24dp"/>
+
+    <!--            지역별 박스 모음-->
+
+    <ImageView
+        android:id="@+id/informationtitle1_box1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/coursetitle1_box1"
+        app:layout_constraintTop_toBottomOf="@id/informationTitle1_tv"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="32dp"
+        android:layout_marginLeft="24dp"/>
+
+    <ImageView
+        android:id="@+id/informationTitle1_box2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/coursetitle1_box2"
+        app:layout_constraintTop_toTopOf="@id/informationtitle1_box1"
+        app:layout_constraintStart_toEndOf="@id/informationtitle1_box1"
+        android:layout_marginLeft="16dp" />
+
+    <ImageView
+        android:id="@+id/informationTitle1_box3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/coursetitle1_box3"
+        app:layout_constraintTop_toBottomOf="@id/informationtitle1_box1"
+        app:layout_constraintStart_toStartOf="@id/informationtitle1_box1"
+        android:layout_marginTop="8dp"/>
+
+    <ImageView
+        android:id="@+id/informationTitle1_box4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/coursetitle1_box4"
+        app:layout_constraintTop_toTopOf="@id/informationTitle1_box3"
+        app:layout_constraintStart_toStartOf="@id/informationTitle1_box2" />
+
+    <ImageView
+        android:id="@+id/informationTitle1_box5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/coursetitle1_box5"
+        app:layout_constraintStart_toStartOf="@id/informationtitle1_box1"
+        app:layout_constraintTop_toBottomOf="@id/informationTitle1_box3"
+        android:layout_marginTop="8dp" />
+
+    <ImageView
+        android:id="@+id/informationTitle1_box6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/coursetitle1_box6"
+        app:layout_constraintStart_toStartOf="@id/informationTitle1_box2"
+        app:layout_constraintTop_toTopOf="@id/informationTitle1_box5" />
+
+    <!--            지역별 이미지 모음-->
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/coursetest1"
+        app:layout_constraintTop_toTopOf="@id/informationtitle1_box1"
+        app:layout_constraintStart_toStartOf="@id/informationtitle1_box1"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="8dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/coursetest2"
+        app:layout_constraintTop_toTopOf="@id/informationTitle1_box2"
+        app:layout_constraintStart_toStartOf="@id/informationTitle1_box2"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="8dp"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/coursetest3"
+        app:layout_constraintTop_toTopOf="@id/informationTitle1_box3"
+        app:layout_constraintStart_toStartOf="@id/informationTitle1_box3"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="8dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/coursetest4"
+        app:layout_constraintTop_toTopOf="@id/informationTitle1_box4"
+        app:layout_constraintStart_toStartOf="@id/informationTitle1_box4"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="8dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/coursetest5"
+        app:layout_constraintTop_toTopOf="@id/informationTitle1_box5"
+        app:layout_constraintStart_toStartOf="@id/informationTitle1_box5"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="8dp"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/coursetest6"
+        app:layout_constraintTop_toTopOf="@id/informationTitle1_box6"
+        app:layout_constraintStart_toStartOf="@id/informationTitle1_box6"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="8dp" />
+
+
+    <TextView
+        android:id="@+id/informationTitle2_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="카테고리"
+        android:textSize="20sp"
+        android:fontFamily="@font/applesdgothicneo_eb"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/informationTitle1_box5"
+        app:layout_constraintStart_toStartOf="@id/informationTitle1_tv"
+        android:layout_marginTop="24dp"/>
+
+    <View
+        android:layout_width="364dp"
+        android:layout_height="1dp"
+        android:background="@color/gray100"
+        app:layout_constraintTop_toBottomOf="@id/informationTitle2_tv"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="24dp"/>
+
+    <!--            카테고리 박스 모음-->
+
+    <ImageView
+        android:id="@+id/informationTitle2_box1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/coursetitle2_box1"
+        app:layout_constraintTop_toBottomOf="@id/informationTitle2_tv"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="32dp"
+        android:layout_marginLeft="24dp" />
+
+    <ImageView
+        android:id="@+id/informationTitle2_box2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/coursetitle2_box2"
+        app:layout_constraintTop_toTopOf="@id/informationTitle2_box1"
+        app:layout_constraintStart_toEndOf="@id/informationTitle2_box1"
+        android:layout_marginLeft="16dp"/>
+
+    <ImageView
+        android:id="@+id/informationTitle2_box3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/coursetitle2_box3"
+        app:layout_constraintTop_toBottomOf="@id/informationTitle2_box1"
+        app:layout_constraintStart_toStartOf="@id/informationTitle2_box1"
+        android:layout_marginTop="8dp"/>
+
+    <ImageView
+        android:id="@+id/informationTitle2_box4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/coursetitle2_box4"
+        app:layout_constraintTop_toTopOf="@id/informationTitle2_box3"
+        app:layout_constraintStart_toStartOf="@id/informationTitle2_box2"/>
+
+    <ImageView
+        android:id="@+id/informationTitle2_box5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/coursetitle2_box5"
+        app:layout_constraintStart_toStartOf="@id/informationTitle2_box1"
+        app:layout_constraintTop_toBottomOf="@id/informationTitle2_box3"
+        android:layout_marginTop="8dp"/>
+
+    <ImageView
+        android:id="@+id/informationTitle2_box6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/coursetitle2_box6"
+        app:layout_constraintTop_toTopOf="@id/informationTitle2_box5"
+        app:layout_constraintStart_toStartOf="@id/informationTitle2_box2" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/coursetitle2_test1"
+        app:layout_constraintTop_toTopOf="@id/informationTitle2_box1"
+        app:layout_constraintStart_toStartOf="@id/informationTitle2_box1"
+        app:layout_constraintBottom_toBottomOf="@id/informationTitle2_box1"
+        android:layout_marginLeft="13dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/coursetitle2_test2"
+        app:layout_constraintTop_toTopOf="@id/informationTitle2_box2"
+        app:layout_constraintStart_toStartOf="@id/informationTitle2_box2"
+        app:layout_constraintBottom_toBottomOf="@id/informationTitle2_box2"
+        android:layout_marginLeft="13dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/coursetitle2_test3"
+        app:layout_constraintTop_toTopOf="@id/informationTitle2_box3"
+        app:layout_constraintStart_toStartOf="@id/informationTitle2_box3"
+        app:layout_constraintBottom_toBottomOf="@id/informationTitle2_box3"
+        android:layout_marginLeft="13dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/coursetitle2_test4"
+        app:layout_constraintTop_toTopOf="@id/informationTitle2_box4"
+        app:layout_constraintStart_toStartOf="@id/informationTitle2_box4"
+        app:layout_constraintBottom_toBottomOf="@id/informationTitle2_box4"
+        android:layout_marginLeft="13dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/coursetitle2_test5"
+        app:layout_constraintTop_toTopOf="@id/informationTitle2_box5"
+        app:layout_constraintStart_toStartOf="@id/informationTitle2_box5"
+        app:layout_constraintBottom_toBottomOf="@id/informationTitle2_box5"
+        android:layout_marginLeft="13dp" />
+
+    <ImageView
+        android:id="@+id/information_nextbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/course_nextbtn"
+        app:layout_constraintTop_toBottomOf="@id/informationTitle2_box5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

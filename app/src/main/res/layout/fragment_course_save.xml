@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Course.CourseSaveFragment"
+    android:background="@color/white">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/courseSaveTitle_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="춘천"
+                android:fontFamily="@font/applesdgothicneo_b"
+                android:textSize="22sp"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="32dp"
+                android:layout_marginLeft="46dp" />
+
+            <ImageView
+                android:id="@+id/courseSaveToken1_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/course_setting_token1"
+                app:layout_constraintTop_toTopOf="@id/courseSaveTitle_tv"
+                app:layout_constraintBottom_toBottomOf="@id/courseSaveTitle_tv"
+                app:layout_constraintStart_toEndOf="@id/courseSaveTitle_tv"
+                android:layout_marginLeft="18dp"/>
+
+            <ImageView
+                android:id="@+id/courseSaveToken2_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/course_setting_token2"
+                app:layout_constraintTop_toTopOf="@id/courseSaveToken1_iv"
+                app:layout_constraintStart_toEndOf="@id/courseSaveToken1_iv"
+                android:layout_marginLeft="9dp" />
+
+            <TextView
+                android:id="@+id/courseSaveDate_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2024.11.23(토) - 2024.11.24(일)"
+                android:fontFamily="@font/applesdgothicneo_m"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@id/courseSaveTitle_tv"
+                app:layout_constraintStart_toStartOf="@id/courseSaveTitle_tv"
+                android:layout_marginTop="12dp"/>
+
+            <TextView
+                android:id="@+id/courseSaveTime_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="여행시간 총 24시간"
+                android:fontFamily="@font/applesdgothicneo_m"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@id/courseSaveDate_tv"
+                app:layout_constraintStart_toStartOf="@id/courseSaveDate_tv"
+                android:layout_marginTop="3dp"/>
+
+            <ImageView
+                android:id="@+id/courseSaveMap_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/course_save_mapimg"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/courseSaveTime_tv"
+                android:layout_marginTop="32dp"/>
+
+            <TextView
+                android:id="@+id/courseSave_title2_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="추천 코스"
+                android:fontFamily="@font/applesdgothicneo_eb"
+                android:textSize="18sp"
+                app:layout_constraintTop_toBottomOf="@id/courseSaveMap_iv"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginLeft="47dp"
+                android:layout_marginTop="31dp"/>
+
+            <ImageView
+                android:id="@+id/courseSave_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/course_save_course1"
+                app:layout_constraintTop_toBottomOf="@id/courseSave_title2_tv"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="23dp"
+                android:layout_marginLeft="24dp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/course_save_course2"
+                app:layout_constraintTop_toTopOf="@id/courseSave_list"
+                app:layout_constraintStart_toEndOf="@id/courseSave_list"
+                android:layout_marginLeft="4dp"/>
+
+            <ImageView
+                android:id="@+id/courseSave_savebtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/course_save_savebtn"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/courseSave_list"
+                android:layout_marginTop="24dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                app:layout_constraintTop_toBottomOf="@id/courseSave_savebtn"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
