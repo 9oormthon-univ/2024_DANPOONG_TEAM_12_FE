@@ -3,5 +3,6 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <string name="introduce_ment">인삿말, 사는 곳, 여행 성향, 성격, 취미, MBTI,\n성별 등등 자유롭게 자신을 소개해주세요!</string>
-
+    <string name="apply_content">안녕하세요~\n공릉동부터 배봉산까지 가는데\n같이 가실 분 구합니다!\n노원 구민이면 출발지 협의 가능합니다!!\n편하게 연락주세요~~\n\n\n연락처: 010-xxxx-xxxx\n카카오 ID: 5555\n인스타: WayToGo</string>
+    <string name="post_up_alret">글이 정상적으로 게시되었습니다\n작성한 글은 지원 내역에서 확인 가능합니다</string>
 </resources>

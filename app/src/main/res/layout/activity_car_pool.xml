@@ -12,7 +12,7 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="@color/blue"
+        android:background="@color/white"
         android:gravity="center_vertical"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -29,7 +29,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="CARPOOL"
-            android:textColor="@color/white"
+            android:textColor="@color/blue"
             android:textSize="22sp"
             android:fontFamily="@font/applesdgothicneo_h"
             android:layout_marginStart="10dp"/>
@@ -49,6 +49,7 @@
         android:id="@+id/carpool_tablayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/toolbar"
@@ -80,8 +81,8 @@
 
     </androidx.viewpager2.widget.ViewPager2>
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/carpool_fab"
+    <ImageButton
+        android:id="@+id/carpool_ib"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="33dp"
@@ -95,6 +96,7 @@
         android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/gray100"
         app:menu="@menu/bottom_navigation_menu"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

@@ -9,12 +9,13 @@ import androidx.viewbinding.ViewBinding
 
 typealias Inflate<T> = (LayoutInflater, ViewGroup?, Boolean) -> T
 
-abstract class BaseFragment<VB: ViewBinding>(
+abstract class BaseFragment<VB : ViewBinding>(
     private val inflate: Inflate<VB>
 ) : Fragment() {
 
-    private var _binding : VB? = null
-    val binding get() = _binding!!
+    private var _binding: VB? = null
+    protected val binding: VB
+        get() = _binding ?: throw IllegalStateException("ViewBinding is only valid between onCreateView and onDestroyView.")
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -22,7 +23,7 @@ abstract class BaseFragment<VB: ViewBinding>(
         savedInstanceState: Bundle?
     ): View? {
         _binding = inflate.invoke(inflater, container, false)
-        return binding.root
+        return _binding?.root
     }
 
     override fun onDestroyView() {

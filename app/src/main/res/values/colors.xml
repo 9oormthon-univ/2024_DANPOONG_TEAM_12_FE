@@ -12,4 +12,5 @@
     <color name="gray300">#999999</color>
     <color name="gray200">#CCCCCC</color>
     <color name="gray100">#EDEDED</color>
+    <color name="search_button">#EFF7FE</color>
 </resources>
