@@ -1,15 +1,172 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MypageFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MypageFragment"
+    android:background="@color/white">
 
-    <!-- TODO: Update blank fragment layout -->
+    <ImageView
+        android:id="@+id/mypageLogo_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/information_logo_iv"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="74dp"
+        android:layout_marginLeft="24dp"/>
+    <ImageView
+        android:id="@+id/mypageTitle_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/mypage_title"
+        app:layout_constraintTop_toTopOf="@id/mypageLogo_iv"
+        app:layout_constraintBottom_toBottomOf="@id/mypageLogo_iv"
+        app:layout_constraintStart_toEndOf="@id/mypageLogo_iv"
+        android:layout_marginLeft="9dp" />
+
+    <ImageView
+        android:id="@+id/mypageNotification_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/information_notification_iv"
+        app:layout_constraintTop_toTopOf="@id/mypageLogo_iv"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginRight="23dp" />
+
+    <ImageView
+        android:id="@+id/mypageProfile_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/mypage_profile"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mypageLogo_iv"
+        android:layout_marginTop="55dp" />
+
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="mypage"
-        android:gravity="center"/>
+        android:id="@+id/mypageName_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="사는 동네"
+        android:textSize="20sp"
+        android:fontFamily="@font/applesdgothicneo_b"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mypageProfile_iv"
+        android:layout_marginTop="7dp" />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/mypageEmail_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="aw****@gmail.com"
+        android:textColor="@color/gray300"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mypageName_tv" />
+
+    <ImageView
+        android:id="@+id/mypageFrame_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/mypage_titleframe"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mypageEmail_tv"
+        android:layout_marginTop="25dp" />
+
+    <ImageView
+        android:id="@+id/mypageTitle1_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/mypage_title1"
+        app:layout_constraintStart_toStartOf="@id/mypageFrame_iv"
+        app:layout_constraintTop_toTopOf="@id/mypageFrame_iv"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="23dp" />
+    
+    <View
+        android:layout_width="1dp"
+        android:layout_height="31dp"
+        android:background="@color/gray300"
+        app:layout_constraintStart_toEndOf="@id/mypageTitle1_iv"
+        app:layout_constraintTop_toTopOf="@id/mypageFrame_iv"
+        app:layout_constraintBottom_toBottomOf="@id/mypageFrame_iv"
+        android:layout_marginLeft="5dp"/>
+
+    <ImageView
+        android:id="@+id/mypageTitle2_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/mypage_title2"
+        app:layout_constraintTop_toTopOf="@id/mypageTitle1_iv"
+        app:layout_constraintStart_toStartOf="@id/mypageFrame_iv"
+        app:layout_constraintEnd_toEndOf="@id/mypageFrame_iv"/>
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="31dp"
+        android:background="@color/gray300"
+        app:layout_constraintStart_toEndOf="@id/mypageTitle2_iv"
+        app:layout_constraintTop_toTopOf="@id/mypageFrame_iv"
+        app:layout_constraintBottom_toBottomOf="@id/mypageFrame_iv"
+        android:layout_marginLeft="5dp"/>
+
+    <ImageView
+        android:id="@+id/mypageTitle3_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/mypage_title3"
+        app:layout_constraintTop_toTopOf="@id/mypageTitle1_iv"
+        app:layout_constraintEnd_toEndOf="@id/mypageFrame_iv"
+        android:layout_marginRight="6dp"/>
+
+    <ImageView
+        android:id="@+id/mypageSub1_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/mypage_sub1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mypageFrame_iv"
+        android:layout_marginTop="39dp" />
+    <ImageView
+        android:id="@+id/mypageSub2_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/mypage_sub2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mypageSub1_iv"/>
+    <ImageView
+        android:id="@+id/mypageSub3_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/mypage_sub3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mypageSub2_iv"/>
+    <ImageView
+        android:id="@+id/mypageSub4_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/mypage_sub4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mypageSub3_iv" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

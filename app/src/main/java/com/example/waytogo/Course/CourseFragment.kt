@@ -20,7 +20,7 @@ class CourseFragment : Fragment() {
         _binding = FragmentCourseBinding.inflate(inflater,container,false)
         return binding.root
 
-        return view
+
 
     }
 

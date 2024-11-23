@@ -1,14 +1,11 @@
 package com.example.waytogo
 
 import android.os.Bundle
-import android.util.Log
-import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
 import androidx.core.view.WindowCompat
-import androidx.core.view.WindowInsetsCompat
 import com.example.waytogo.Course.CourseFragment
 import com.example.waytogo.databinding.ActivityHomeBinding
+import com.example.waytogo.information.InfoFragment
 
 class HomeActivity : AppCompatActivity() {
     private val binding : ActivityHomeBinding by lazy {
@@ -39,7 +36,9 @@ class HomeActivity : AppCompatActivity() {
                     true
                 }
                 R.id.nav_info -> {
-                    supportFragmentManager.beginTransaction().replace(R.id.fragmentcontainer_fl,InfoFragment()).commit()
+                    supportFragmentManager.beginTransaction().replace(R.id.fragmentcontainer_fl,
+                        InfoFragment()
+                    ).commit()
                     true
                 }
                 R.id.nav_course -> {

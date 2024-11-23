@@ -7,5 +7,12 @@
     <string name="course_setting">각 날짜의 일정 <font color="#5A5A5A">시작시간</font> 과 <font color="#5A5A5A">종료시간</font>을 설정해주세요.
         \n기본 설정 시간은 <font color="#5A5A5A">오전 10시 - 오후 10시 총 12시간</font> 입니다.</string>
 
+    <string name="informationFinish_title">역사가 남아있는곳, <font color="#3227F8">춘천</font></string>
+    <string name="informationFinish_location">강원도 서북부에 위치, 호수와 산이 어우러진 자연경관과 낭만적인 도시</string>
+    <string name="informationFinish_special">춘천 닭갈비, 막국수, 토속주 감자술, 애플수박</string>
+    <string name="informationFinish_price">소양강댐, 춘천 호반</string>
+    <string name="informationFinish_tour">남이섬, 소양강 스카이워크, 춘천 애니메이션 박물관, 강촌 레일바이크</string>
+    <string name="infirmationFinish_activity">북한강 자전거길 라이딩, 소양강호 유람선, 가을 단풍길 드라이브</string>
+
 
 </resources>
