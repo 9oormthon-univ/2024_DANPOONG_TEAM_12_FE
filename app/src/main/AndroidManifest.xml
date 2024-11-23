@@ -16,7 +16,22 @@
         android:theme="@style/Theme.WayToGo"
         tools:targetApi="31">
         <activity
+            android:name=".CarPool.FirstOnBoarding.FourthActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CarPool.FirstOnBoarding.ThirdActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CarPool.FirstOnBoarding.SecondActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CarPool.FirstOnBoarding.FirstActivity"
+            android:exported="false" />
+        <activity
             android:name=".CarPool.CarPoolPostUpActivity"
+            android:exported="false" />
+        <activity
+            android:name=".onBoarding.LoginActivity"
             android:exported="false" />
         <activity
             android:name=".onBoarding.OnBoardingActivity"
@@ -24,8 +39,15 @@
         <activity
             android:name=".CarPool.CarPoolActivity"
             android:exported="false"
-            android:windowSoftInputMode="adjustPan">
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".CarPool.CarPoolApply.CarPoolApplyActivity"
@@ -39,23 +61,8 @@
             android:value="${NATIVE_KEY}" />
 
         <activity
-            android:name=".onBoarding.OnBoardingActivity"
-            android:exported="false" />
-        <activity
             android:name=".HomeActivity"
-            android:exported="true" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:exported="true" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-        </activity>
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="false" /> <!-- 카카오 로그인, 인가코드를 받기 위한 액티비티 -->

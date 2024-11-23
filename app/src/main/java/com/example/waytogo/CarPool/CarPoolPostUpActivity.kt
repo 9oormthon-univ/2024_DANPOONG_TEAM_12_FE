@@ -5,6 +5,7 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.provider.MediaStore
+import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.ImageButton
@@ -14,8 +15,10 @@ import android.widget.Toast
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
+import com.example.waytogo.HomeActivity
 import com.example.waytogo.R
 import com.example.waytogo.databinding.ActivityCarPoolPostUpBinding
+import com.example.waytogo.utils.Constants.TAG
 import java.util.Calendar
 
 class CarPoolPostUpActivity : AppCompatActivity() {
@@ -55,29 +58,7 @@ class CarPoolPostUpActivity : AppCompatActivity() {
                 Toast.makeText(this, "최대 4장까지 추가할 수 있습니다.", Toast.LENGTH_SHORT).show()
             }
         }
-    }
 
-    // 이미지 URI를 PhotoContainer에 추가
-    private fun addPhotoToContainer(uri: Uri) {
-        val photoContainer = binding.photoContainer
-
-        // 새로운 이미지 추가
-        val imageView = ImageView(this).apply {
-            layoutParams = LinearLayout.LayoutParams(
-                resources.getDimensionPixelSize(R.dimen.photo_width),
-                resources.getDimensionPixelSize(R.dimen.photo_height)
-            ).apply {
-                marginEnd = resources.getDimensionPixelSize(R.dimen.photo_margin)
-            }
-            setImageURI(uri)
-            scaleType = ImageView.ScaleType.CENTER_CROP
-        }
-        photoContainer.addView(imageView, photoContainer.childCount)
-
-        // 최대 사진 갯수 확인 후 버튼 숨기기
-        if (photoContainer.childCount >= maxPhotos) {
-            binding.photoUploadIb.visibility = View.GONE
-        }
 
 
 
@@ -180,4 +161,26 @@ class CarPoolPostUpActivity : AppCompatActivity() {
 //            Toast.makeText(this, "시작 시간은 종료 시간보다 이전이어야 합니다.", Toast.LENGTH_SHORT).show()
 //        }
 //    }
+// 이미지 URI를 PhotoContainer에 추가
+    private fun addPhotoToContainer(uri: Uri) {
+        val photoContainer = binding.photoContainer
+
+        // 새로운 이미지 추가
+        val imageView = ImageView(this).apply {
+            layoutParams = LinearLayout.LayoutParams(
+                resources.getDimensionPixelSize(R.dimen.photo_width),
+                resources.getDimensionPixelSize(R.dimen.photo_height)
+            ).apply {
+                marginEnd = resources.getDimensionPixelSize(R.dimen.photo_margin)
+            }
+            setImageURI(uri)
+            scaleType = ImageView.ScaleType.CENTER_CROP
+        }
+        photoContainer.addView(imageView, photoContainer.childCount)
+
+        // 최대 사진 갯수 확인 후 버튼 숨기기
+        if (photoContainer.childCount >= maxPhotos) {
+            binding.photoUploadIb.visibility = View.GONE
+        }
+    }
 }

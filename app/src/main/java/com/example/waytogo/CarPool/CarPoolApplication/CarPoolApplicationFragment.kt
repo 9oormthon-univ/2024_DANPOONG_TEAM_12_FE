@@ -19,9 +19,9 @@ import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 class CarPoolApplicationFragment : BaseFragment<FragmentCarPoolApplicationBinding>(FragmentCarPoolApplicationBinding::inflate) {
 
     val itemList = mutableListOf(
-        ApplyList(R.drawable.dummy_image_1, "배봉까지 같이 가요!", "출발지: 대한민국 역사 박물관", "목적지: 서울 동대문구 휘경2동", "날짜: 2024. 11. 23", "시간: 오전 9시"),
+//        ApplyList(R.drawable.dummy_image_1, "배봉까지 같이 가요!", "출발지: 대한민국 역사 박물관", "목적지: 서울 동대문구 휘경2동", "날짜: 2024. 11. 23", "시간: 오전 9시"),
         ApplyList(R.drawable.dummy_image_2, "바다보러 해운대 갑시다!", "출발지: 서울 종로구", "목적지: 해운대역", "날짜: 2024. 11. 22", "시간: 오전 7시"),
-        ApplyList(R.drawable.dummy_image_3, "춘천 같이 가실 분", "출발지: 서울 종로구", "목적지: 춘천", "날짜: 2024. 11. 24", "시간: 오후 3시")
+//        ApplyList(R.drawable.dummy_image_3, "춘천 같이 가실 분", "출발지: 서울 종로구", "목적지: 춘천", "날짜: 2024. 11. 24", "시간: 오후 3시")
     )
 
     private val viewModel: CarPoolViewModel by activityViewModels()

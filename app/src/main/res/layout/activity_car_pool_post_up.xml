@@ -140,6 +140,35 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="21dp"
                     android:fontFamily="@font/applesdgothicneo_m"
+                    android:text="출발지"
+                    android:textSize="15sp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/department_in_post_el"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="12dp"
+                    android:hint="목적지를 입력해주세요"
+                    app:boxStrokeErrorColor="@color/gray200"
+                    app:errorIconDrawable="@null"
+                    app:errorTextColor="@color/gray300"
+                    app:shapeAppearance="@style/ShapeAppearance.MaterialComponents.MediumComponent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/department_in_post_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/applesdgothicneo_r"
+                        android:textSize="15sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="21dp"
+                    android:fontFamily="@font/applesdgothicneo_m"
                     android:text="목적지"
                     android:textSize="15sp" />
 

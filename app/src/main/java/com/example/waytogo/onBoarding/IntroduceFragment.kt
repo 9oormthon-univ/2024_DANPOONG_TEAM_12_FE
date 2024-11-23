@@ -6,6 +6,8 @@ import android.view.View
 import android.widget.ImageButton
 import com.example.waytogo.BaseFragment
 import com.example.waytogo.CarPool.CarPoolActivity
+import com.example.waytogo.CarPool.FirstOnBoarding.FirstActivity
+import com.example.waytogo.HomeActivity
 import com.example.waytogo.databinding.FragmentIntroduceBinding
 
 class IntroduceFragment : BaseFragment<FragmentIntroduceBinding>(FragmentIntroduceBinding::inflate) {
@@ -25,7 +27,7 @@ class IntroduceFragment : BaseFragment<FragmentIntroduceBinding>(FragmentIntrodu
 
         // 계속하기 버튼 누르면 카풀 페이지로 넘어가기
         binding.nextBtn.setOnClickListener {
-            val intent = Intent(requireActivity(), CarPoolActivity::class.java)
+            val intent = Intent(requireActivity(), FirstActivity::class.java)
             startActivity(intent)
         }
     }

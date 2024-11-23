@@ -1,11 +1,13 @@
 package com.example.waytogo
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import com.example.waytogo.CarPool.CarPoolActivity
 import com.example.waytogo.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
@@ -26,6 +28,11 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        binding.homecarfoolBtn.setOnClickListener {
+            val intent = Intent(requireContext(), CarPoolActivity::class.java)
+            startActivity(intent)
+        }
+
         val likelist = listOf(
             Triple(R.id.hometitle2_frame1_heartbf_iv,R.drawable.homeheartbf_iv,R.drawable.homeheartaf_iv),
             Triple(R.id.hometitle2_frame2_heartbf_iv,R.drawable.homeheartbf_iv,R.drawable.homeheartaf_iv),
@@ -43,6 +50,9 @@ class HomeFragment : Fragment() {
             }
         }
     }
+
+
+
     private fun toggleImage (imageView: ImageView, id: Int, originalImage: Int, newImage: Int) {
         val isOriginalImage = imageStateMap[id] ?: true
 

@@ -28,7 +28,8 @@ class CarpoolCancelModal : BottomSheetDialogFragment() {
     ): View? {
         binding = CarpoolCancelModalLayoutBinding.inflate(inflater, container, false)
 
-        binding.cancelTitleTv.text = viewModel.applyTitle.toString()
+//        binding.cancelTitleTv.text = viewModel.applyTitle.toString()
+        binding.cancelTitleTv.text = "바다보러 해운대 갑시다!"
 
         return binding.root
     }

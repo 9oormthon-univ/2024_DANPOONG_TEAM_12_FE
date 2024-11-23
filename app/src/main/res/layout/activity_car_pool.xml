@@ -98,6 +98,8 @@
         android:layout_height="wrap_content"
         android:background="@color/gray100"
         app:menu="@menu/bottom_navigation_menu"
+        app:itemIconTint="@color/bottom_nav_color_selector"
+        app:itemTextColor="@color/bottom_nav_color_selector"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"/>
