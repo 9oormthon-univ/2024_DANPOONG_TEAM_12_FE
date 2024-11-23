@@ -52,6 +52,41 @@ class CourseSettingFragment : Fragment() {
 
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        var mapcheck = true
+
+        //설정완료 버튼 누르면 맵과 시간 보여줌
+        binding.courseSettingNextbtn.setOnClickListener {
+            binding.courseSettingMapbtn.visibility = View.VISIBLE
+            binding.courseSettingMapbtn.setImageResource(R.drawable.course_setting_downbtn)
+            binding.courseSettingMapiv.visibility = View.VISIBLE
+            binding.courseSettingFinishbtn.visibility = View.VISIBLE
+            binding.courseSettingNextbtn.visibility = View.GONE
+            binding.courseSettingLine.visibility = View.GONE
+        }
+
+        //지도 on/off
+        binding.courseSettingMapbtn.setOnClickListener {
+            if(mapcheck) {
+                binding.courseSettingMapiv.visibility = View.GONE
+                binding.courseSettingMapbtn.setImageResource(R.drawable.course_setting_upbtn)
+                mapcheck = false
+            } else {
+                binding.courseSettingMapiv.visibility = View.VISIBLE
+                binding.courseSettingMapbtn.setImageResource(R.drawable.course_setting_downbtn)
+                mapcheck = true
+            }
+        }
+
+        val savafragment = CourseSaveFragment()
+        binding.courseSettingFinishbtn.setOnClickListener {
+            parentFragmentManager.beginTransaction().replace(R.id.course_child_fl,savafragment).commit()
+        }
+
+    }
+
     private fun showTimePicker(onTimeSet: (hour: Int, minute: Int) -> Unit) {
         val calendar = Calendar.getInstance()
         val hour = calendar.get(Calendar.HOUR_OF_DAY)
@@ -71,7 +106,7 @@ class CourseSettingFragment : Fragment() {
             if (diffInMillis > 0) {
                 val hours = diffInMillis / (1000 * 60 * 60)
                 val minutes = (diffInMillis / (1000 * 60)) % 60
-                val totalTime = "여행시간 총 ${hours}시간 ${minutes}분"
+                binding.courseSetting1Tv.setText("여행시간 총 ${hours}시간 ${minutes}분")
             } else {
                 Toast.makeText(requireContext(), "종료 시간이 시작 시간보다 이후여야 합니다.", Toast.LENGTH_SHORT).show()
             }

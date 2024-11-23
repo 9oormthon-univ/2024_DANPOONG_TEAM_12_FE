@@ -21,18 +21,6 @@ class HomeActivity : AppCompatActivity() {
         WindowCompat.setDecorFitsSystemWindows(window, false)
         setContentView(binding.root)
 
-        val topBar = findViewById<View>(R.id.homeTopBar_fl)
-
-        // WindowInsets를 사용해 상태바 높이를 강제로 적용
-        ViewCompat.setOnApplyWindowInsetsListener(topBar) { view, insets ->
-            val statusBarHeight = insets.getInsets(WindowInsetsCompat.Type.systemBars()).top
-            Log.d("Insets", "StatusBar height: $statusBarHeight")
-
-            // FrameLayout에 패딩 적용
-            view.setPadding(0, statusBarHeight, 0, 0)
-            insets
-        }
-
         // 상태바 색상 설정
         window.statusBarColor = resources.getColor(R.color.blue, theme)
 

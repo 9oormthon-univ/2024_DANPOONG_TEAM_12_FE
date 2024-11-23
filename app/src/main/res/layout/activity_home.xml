@@ -8,16 +8,6 @@
     android:background="@color/white"
     tools:context=".HomeActivity">
 
-    <!-- 상단 파란색 영역 -->
-    <FrameLayout
-        android:id="@+id/homeTopBar_fl"
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:background="@color/blue"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
-
-
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentcontainer_fl"
         android:layout_width="match_parent"

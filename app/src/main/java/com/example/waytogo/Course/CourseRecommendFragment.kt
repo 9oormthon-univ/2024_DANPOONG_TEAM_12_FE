@@ -59,6 +59,7 @@ class CourseRecommendFragment : Fragment() {
             }
         }
 
+
         binding.courseLocationEt.setOnClickListener {
             binding.coursesublistCl.visibility = View.VISIBLE
         }
