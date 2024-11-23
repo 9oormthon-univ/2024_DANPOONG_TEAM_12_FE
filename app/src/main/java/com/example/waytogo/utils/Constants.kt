@@ -1,6 +1,6 @@
 package com.example.waytogo.utils
 
-import com.example.cospick.BuildConfig
+import com.example.waytogo.BuildConfig
 
 object Constants {
     const val TAG : String = "로그"

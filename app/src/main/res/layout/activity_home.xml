@@ -8,50 +8,11 @@
     android:background="@color/white"
     tools:context=".HomeActivity">
 
-    <!-- 상단 파란색 영역 -->
-    <FrameLayout
-        android:id="@+id/homeTopBar_fl"
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:background="@color/blue"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
-
-    <!-- 콘텐츠 영역 -->
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/homeTop_cl"
-        android:layout_width="match_parent"
-        android:layout_height="90dp"
-        app:layout_constraintTop_toBottomOf="@id/homeTopBar_fl"
-        app:layout_constraintStart_toStartOf="parent"
-        android:background="@color/blue">
-
-        <ImageView
-            android:id="@+id/hometopname_iv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/hometopname_iv"
-            android:layout_marginStart="24dp"
-            android:layout_marginBottom="15dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <ImageView
-            android:id="@+id/homenotification_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/homenotification_btn"
-            android:layout_marginEnd="24dp"
-            android:layout_marginBottom="18dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentcontainer_fl"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintTop_toBottomOf="@id/homeTop_cl"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toTopOf="@id/homenavigation_bnv"
         app:defaultNavHost="true"

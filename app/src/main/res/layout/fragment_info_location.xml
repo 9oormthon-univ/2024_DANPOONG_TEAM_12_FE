@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".information.InfoLocationFragment"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/informationLocation_backbtn_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/information_backbtn_iv"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="78dp"
+        android:layout_marginLeft="24dp"/>
+    <ImageView
+        android:id="@+id/informationLocation_logo_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/information_title_iv"
+        app:layout_constraintTop_toTopOf="@id/informationLocation_backbtn_iv"
+        app:layout_constraintBottom_toBottomOf="@id/informationLocation_backbtn_iv"
+        app:layout_constraintStart_toEndOf="@id/informationLocation_backbtn_iv"
+        android:layout_marginLeft="12dp"/>
+
+    <ImageView
+        android:id="@+id/informationLocation_notification_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/information_notification_iv"
+        app:layout_constraintTop_toTopOf="@id/informationLocation_backbtn_iv"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginRight="24dp"/>
+
+    <ImageView
+        android:id="@+id/informationLocation_inputbox_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/information_location_inputboxaf_iv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/informationLocation_backbtn_iv"
+        android:layout_marginTop="47dp"/>
+
+    <ImageView
+        android:id="@+id/information_location_map"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/information_location_map"
+        app:layout_constraintTop_toBottomOf="@id/informationLocation_inputbox_iv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="28dp" />
+
+    <ImageView
+        android:id="@+id/informationLocation_checkbtn_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/information_location_checkbtnaf_iv"
+        app:layout_constraintTop_toBottomOf="@id/information_location_map"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="24dp"
+        android:layout_marginLeft="23dp"/>
+    <ImageView
+        android:id="@+id/informationLocation_cencelbtn_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/information_cencelbtn_iv"
+        app:layout_constraintTop_toBottomOf="@id/information_location_map"
+        app:layout_constraintStart_toEndOf="@id/informationLocation_checkbtn_iv"
+        android:layout_marginTop="24dp"
+        android:layout_marginLeft="9dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

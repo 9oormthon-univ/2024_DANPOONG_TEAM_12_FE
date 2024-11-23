@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/information_imagebox_iv"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginLeft="16dp"/>
+    <ImageView
+        android:id="@+id/informationSlideImage_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/information_testimg1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginLeft="16dp"/>
+    <TextView
+        android:id="@+id/informationSlideTitle_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="예시입니다."
+        android:textSize="14sp"
+        android:fontFamily="@font/applesdgothicneo_m"
+        app:layout_constraintTop_toBottomOf="@id/informationSlideImage_iv"
+        app:layout_constraintStart_toStartOf="@id/informationSlideImage_iv"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="15dp"/>
+    <TextView
+        android:id="@+id/informationSlideLocation_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="지역명 입니다."
+        android:textSize="12sp"
+        android:textColor="@color/gray300"
+        android:fontFamily="@font/applesdgothicneo_m"
+        app:layout_constraintTop_toBottomOf="@id/informationSlideTitle_tv"
+        app:layout_constraintStart_toStartOf="@id/informationSlideImage_iv"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="4dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
