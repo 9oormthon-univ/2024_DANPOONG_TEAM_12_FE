@@ -14,25 +14,35 @@
         android:paddingVertical="19dp">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:id="@+id/start_location_tv"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:text="서울 XX구"
             android:textSize="20sp"
-            android:fontFamily="@font/applesdgothicneo_eb"/>
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:fontFamily="@font/applesdgothicneo_eb"
+            android:layout_weight="1"
+            android:gravity="center"/>
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/carpool_to_icon"
             android:layout_gravity="center"
-            android:layout_marginHorizontal="65dp"/>
+            android:layout_marginHorizontal="50dp"/>
 
         <TextView
-            android:layout_width="wrap_content"
+            android:id="@+id/end_location_tv"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:text="서울 XX구"
             android:textSize="20sp"
-            android:fontFamily="@font/applesdgothicneo_eb"/>
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:fontFamily="@font/applesdgothicneo_eb"
+            android:layout_weight="1"
+            android:gravity="center"/>
 
     </LinearLayout>
 
@@ -43,9 +53,10 @@
         android:background="@color/gray300" />
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/application_list_rv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginVertical="20dp"
+        android:layout_marginTop="20dp"
         tools:listitem="@layout/application_list_item"/>
 
 </LinearLayout>

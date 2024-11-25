@@ -18,3 +18,13 @@ fun EditText.onMyTextChanged(completion : (CharSequence?) -> Unit){
         }
     })
 }
+
+// 문자열이 json 형태 인지, json 배열 형태인지
+fun String?.isJsonObject():Boolean {
+    return this?.startsWith("{") == true && this.endsWith("}")
+}
+
+// 문자열이 Json 배열인지
+fun String?.isJsonArray():Boolean {
+    return this?.startsWith("[") == true && this.endsWith("]")
+}

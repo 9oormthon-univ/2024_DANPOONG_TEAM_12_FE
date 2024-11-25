@@ -2,7 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/carpool_fl"
+    android:id="@+id/carpool_apply_fl"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".CarPool.CarPoolActivity">
@@ -12,7 +12,7 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="@color/blue"
+        android:background="@color/white"
         android:gravity="center_vertical"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -29,7 +29,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="CARPOOL"
-            android:textColor="@color/white"
+            android:textColor="@color/blue"
             android:textSize="22sp"
             android:fontFamily="@font/applesdgothicneo_h"
             android:layout_marginStart="10dp"/>
@@ -44,39 +44,16 @@
 
     </androidx.appcompat.widget.Toolbar>
 
-
-    <com.google.android.material.tabs.TabLayout
-        android:id="@+id/carpool_tablayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/toolbar"
-        app:tabIndicator="@null">
-
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="카풀 찾기" />
-
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="지원 내역" />
-
-    </com.google.android.material.tabs.TabLayout>
-
-
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/carpool_fv"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:paddingHorizontal="24dp"
-        android:paddingVertical="16dp"
+        android:paddingHorizontal="16dp"
+        android:paddingTop="16dp"
         app:layout_constraintBottom_toTopOf="@id/bottom_navigation"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/carpool_tablayout">
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
 
     </androidx.fragment.app.FragmentContainerView>
 

@@ -2,6 +2,7 @@ package com.example.waytogo.CarPool
 
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
+import com.example.waytogo.CarPool.CarPoolApplication.CarPoolApplicationFragment
 
 class CarPoolViewPagerAdapter(fragmentActivity: CarPoolActivity): FragmentStateAdapter(fragmentActivity) {
     private lateinit var viewPagerAdapter: CarPoolViewPagerAdapter

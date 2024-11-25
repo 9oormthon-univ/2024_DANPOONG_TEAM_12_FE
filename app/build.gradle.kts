@@ -4,6 +4,8 @@ import java.util.Properties
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    id("kotlin-kapt")
+    id("com.google.dagger.hilt.android")
 }
 
 //	Proerties 표준함수명이 Java > kotlin 으로 넘어오면서 변함.
@@ -24,16 +26,40 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-    }
 
         buildConfigField(
             "String",
             "NATIVE_KEY",
             properties.getProperty("native_key")
         )
+        buildConfigField(
+            "String",
+            "SEARCH_API_BASE",
+            properties.getProperty("search_api_base")
+        )
+        buildConfigField(
+            "String",
+            "REST_API_KEY",
+            properties.getProperty("rest_api_key")
+        )
+        buildConfigField(
+            "String",
+            "BASE_URL",
+            properties.getProperty("base_url")
+        )
+        buildConfigField(
+            "String",
+            "TOKEN_KEY",
+            properties.getProperty("token_key")
+        )
         manifestPlaceholders["NATIVE_KEY"] = properties.getProperty("manifest_native_key")
+    }
+
+
+
     buildFeatures {
         viewBinding = true
+        buildConfig = true
     }
 
     buildTypes {
@@ -60,9 +86,14 @@ android {
 
 dependencies {
     // retrofit
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
 
     // coroutines
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
+
+    // Retrofit Coroutine Adapter
+    implementation("com.squareup.retrofit2:adapter-rxjava2:2.9.0")
 
     // Kakao SDK 추가
     implementation("com.kakao.sdk:v2-all:2.20.1")
@@ -79,16 +110,26 @@ dependencies {
     implementation("androidx.fragment:fragment:1.8.3")
     implementation("androidx.fragment:fragment-ktx:1.8.3")
 
+    // Hilt
+    implementation("com.google.dagger:hilt-android:2.51.1")
+    kapt("com.google.dagger:hilt-compiler:2.51.1")
+    implementation("androidx.navigation:navigation-fragment-ktx:2.8.4")
+    implementation("androidx.navigation:navigation-ui-ktx:2.8.4")
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+    implementation(libs.firebase.functions.ktx)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+}
 
-    implementation("androidx.navigation:navigation-fragment-ktx:2.8.4")
-    implementation("androidx.navigation:navigation-ui-ktx:2.8.4")
+// Allow references to generated code
+kapt {
+    correctErrorTypes = true
+
 
 }

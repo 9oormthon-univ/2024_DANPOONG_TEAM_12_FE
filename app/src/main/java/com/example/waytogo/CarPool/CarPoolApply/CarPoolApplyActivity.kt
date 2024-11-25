@@ -22,11 +22,9 @@ class CarPoolApplyActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         // FindList Fragment로 바로 연결
-        if(savedInstanceState == null){
-            supportFragmentManager.commit {
-                setReorderingAllowed(true)
-                replace(R.id.carpool_fv, passingLocation(FindListFragment()))
-            }
+        supportFragmentManager.commit {
+            setReorderingAllowed(true)
+            replace(R.id.carpool_fv, passingLocation(FindListFragment()))
         }
     }
 
@@ -42,13 +40,13 @@ class CarPoolApplyActivity : AppCompatActivity() {
     // 검색한 위치 정보 넘겨주기
     private fun passingLocation(fragment: Fragment): Fragment {
         // MyNoticeFragment에서 넘어온 데이터
-        val department = intent.getStringExtra("department")
-        val destination = intent.getStringExtra("destination")
+        val startLocation = intent.getStringExtra("startLocation")
+        val endLocation = intent.getStringExtra("endLocation")
 
         // ProfileFragment에 다시 데이터 전달
         val bundle = Bundle()
-        bundle.putString("department", department)
-        bundle.putString("destination", destination)
+        bundle.putString("startLocation", startLocation)
+        bundle.putString("endLocation", endLocation)
         fragment.arguments = bundle
 
         return fragment
